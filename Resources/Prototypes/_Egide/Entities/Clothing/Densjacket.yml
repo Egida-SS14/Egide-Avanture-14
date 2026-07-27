@@ -1,0 +1,25 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatDensJacket
+  name: Den's jacket
+  description: an old bomber jacket equipped with an engineer's life support system and additional temperature and radiation sensors. a strange decision.
+  components:
+  - type: Sprite
+    sprite: _Egide/Clothing/OuterClothing/Coats/Densjacket.rsi
+  - type: Clothing
+    sprite: _Egide/Clothing/OuterClothing/Coats/Densjacket.rsi
+  - type: Storage
+    grid:
+    - 0,0,2,2
+  - type: Geiger
+    attachedToSuit: true
+  - type: Armor
+    coverage:
+    - Chest
+    modifiers:
+      coefficients:
+        Asphyxiation: 0.9
+        Heat: 0.85
+        Radiation: 0.9
+  - type: ExplosionResistance
+    damageCoefficient: 0.9

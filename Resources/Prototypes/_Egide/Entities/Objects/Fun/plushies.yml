@@ -1,0 +1,29 @@
+- type: entity
+  parent: BasePlushie
+  id: NyphovalkPlushie
+  name: Rusty Sangre
+  description: A beautiful creation of nature.
+  suffix: EgidaPlushie
+  components:
+  - type: Sprite
+    sprite: _Egide/Objects/Fun/Plushies.rsi
+    state: rusty
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 10
+  - type: Item
+
+- type: entity
+  parent: BasePlushie
+  id: DegartPlushie
+  name: Degart
+  description: Shitcurity monster
+  suffix: EgidaPlushie
+  components:
+  - type: Sprite
+    sprite: _Egide/Objects/Fun/Plushies.rsi
+    state: degart
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 10
+  - type: Item

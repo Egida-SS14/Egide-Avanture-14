@@ -1,0 +1,353 @@
+- type: jukebox
+  id: TobyFoxTheThirdSanctuary
+  name: Toby Fox - The Third Sanctuary
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - The Third Sanctuary.ogg
+
+- type: jukebox
+  id: TobyFoxRaiseUpYourBat
+  name: Toby Fox - Raise Up Your Bat
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - Raise Up Your Bat.ogg
+
+- type: jukebox
+  id: TobyFoxNowsYourChanceToBeA
+  name: Toby Fox - NOW'S YOUR CHANCE TO BE A
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - NOW'S YOUR CHANCE TO BE A.ogg
+
+- type: jukebox
+  id: TobyFoxNeverendingNight
+  name: Toby Fox - Neverending Night
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - Neverending Night.ogg
+
+- type: jukebox
+  id: TobyFoxMyCastleTown
+  name: Toby Fox - My Castle Town
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - My Castle Town.ogg
+
+- type: jukebox
+  id: TobyFoxMegalovania
+  name: Toby Fox - MEGALOVANIA
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - MEGALOVANIA.ogg
+
+- type: jukebox
+  id: TobyFoxItsTvTime
+  name: Toby Fox - It's TV Time!
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - It's TV Time!.ogg
+
+- type: jukebox
+  id: TobyFoxHopesAndDreams
+  name: Toby Fox - Hopes And Dreams
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - Hopes And Dreams.ogg
+
+- type: jukebox
+  id: TobyFoxGlaceir
+  name: Toby Fox - GLACEIR
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - GLACEIR.ogg
+
+- type: jukebox
+  id: TobyFoxFlowerMan
+  name: Toby Fox - Flower Man
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - Flower Man.ogg
+
+- type: jukebox
+  id: TobyFoxFinale
+  name: Toby Fox - Finale
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - Finale.ogg
+
+- type: jukebox
+  id: TobyFoxDialtone
+  name: Toby Fox - Dialtone
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - Dialtone.ogg
+
+- type: jukebox
+  id: TobyFoxCutieMewMewMagic
+  name: Toby Fox - Cutie Mew Mew Magic
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - Cutie Mew Mew Magic.ogg
+
+- type: jukebox
+  id: TobyFoxBurningEyes
+  name: Toby Fox - BURNING EYES
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - BURNING EYES.ogg
+
+- type: jukebox
+  id: TobyFoxBlackKnife
+  name: Toby Fox - Black Knife
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - Black Knife.ogg
+
+- type: jukebox
+  id: TobyFoxBigShot
+  name: Toby Fox - BIG SHOT
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - BIG SHOT.ogg
+
+- type: jukebox
+  id: TobyFoxADarkZone
+  name: Toby Fox - A DARK ZONE
+  path:
+    path: /Audio/_Egide/Music/Toby Fox - A DARK ZONE.ogg
+
+- type: jukebox
+  id: TheLongFacesJane
+  name: The Long Faces - Jane!
+  path:
+    path: /Audio/_Egide/Music/The Long Faces - Jane!.ogg
+
+- type: jukebox
+  id: TheLivingTombstoneMyOrdinaryLife
+  name: The Living Tombstone - My Ordinary Life
+  path:
+    path: /Audio/_Egide/Music/The Living Tombstone - My Ordinary Life.ogg
+
+- type: jukebox
+  id: TheLivingTombstoneItsBeenSoLong
+  name: The Living Tombstone - It's Been So Long
+  path:
+    path: /Audio/_Egide/Music/The Living Tombstone - It's Been So Long.ogg
+
+- type: jukebox
+  id: TheLivingTombstoneICantFixYou
+  name: The Living Tombstone - I Can't Fix You
+  path:
+    path: /Audio/_Egide/Music/The Living Tombstone - I Can't Fix You.ogg
+
+- type: jukebox
+  id: TheLivingTombstoneDiscord
+  name: The Living Tombstone - Discord
+  path:
+    path: /Audio/_Egide/Music/The Living Tombstone - Discord.ogg
+
+- type: jukebox
+  id: TheLivingTombstoneDieInAFire
+  name: The Living Tombstone - Die In A Fire
+  path:
+    path: /Audio/_Egide/Music/The Living Tombstone - Die In A Fire.ogg
+
+- type: jukebox
+  id: TheHeavyTheApology
+  name: The Heavy - 'The Apology'
+  path:
+    path: /Audio/_Egide/Music/The Heavy - 'The Apology'.ogg
+
+- type: jukebox
+  id: TheCaretakerLibetsDelay
+  name: The Caretaker - Libet's delay
+  path:
+    path: /Audio/_Egide/Music/The Caretaker - Libet's delay.ogg
+
+- type: jukebox
+  id: TheCaretakerB6MyHeartWillStopInJoy
+  name: The Caretaker - B6 – My heart will stop in joy
+  path:
+    path: /Audio/_Egide/Music/The Caretaker - B6 – My heart will stop in joy.ogg
+
+- type: jukebox
+  id: TheCaretakerA2WeDontHaveManyDays
+  name: The Caretaker - A2 – We don't have many days
+  path:
+    path: /Audio/_Egide/Music/The Caretaker - A2 – We don't have many days.ogg
+
+- type: jukebox
+  id: TheCaretakerA1ItsJustABurningMemory
+  name: The Caretaker - A1 – It's just a burning memory
+  path:
+    path: /Audio/_Egide/Music/The Caretaker - A1 – It's just a burning memory.ogg
+
+- type: jukebox
+  id: TheBossHossWordUp
+  name: THE BOSSHOSS - Word Up
+  path:
+    path: /Audio/_Egide/Music/THE BOSSHOSS - Word Up.ogg
+
+- type: jukebox
+  id: ThatHandsomeDevilTheUAndIInSuicide
+  name: That Handsome Devil - The U & I In Suicide
+  path:
+    path: /Audio/_Egide/Music/That Handsome Devil - The U & I In Suicide.ogg
+
+- type: jukebox
+  id: ThatHandsomeDevilCharliesInferno
+  name: That Handsome Devil - Charlie's Inferno
+  path:
+    path: /Audio/_Egide/Music/That Handsome Devil - Charlie's Inferno.ogg
+
+- type: jukebox
+  id: TechnotronicPumpUpTheJam
+  name: Technotronic - Pump Up The Jam
+  path:
+    path: /Audio/_Egide/Music/Technotronic - Pump Up The Jam.ogg
+
+- type: jukebox
+  id: SonicSparkTheBeach
+  name: Sonic Spark - The Beach
+  path:
+    path: /Audio/_Egide/Music/Sonic Spark - The Beach.ogg
+
+- type: jukebox
+  id: SinShakeSinCantGoToHell
+  name: Sin Shake Sin - Can't Go To Hell
+  path:
+    path: /Audio/_Egide/Music/Sin Shake Sin - Can't Go To Hell.ogg
+
+- type: jukebox
+  id: RoyalRepublicWeekendMan
+  name: RoyalRepublic - Weekend-Man
+  path:
+    path: /Audio/_Egide/Music/RoyalRepublic - Weekend-Man.ogg
+
+- type: jukebox
+  id: RoyalRepublicTommyGun
+  name: RoyalRepublic - Tommy-Gun
+  path:
+    path: /Audio/_Egide/Music/RoyalRepublic - Tommy-Gun.ogg
+
+- type: jukebox
+  id: PrivatePureLoveTrainAdmiringYou
+  name: Private Pure Love Train - Admiring you
+  path:
+    path: /Audio/_Egide/Music/Private Pure Love Train - Admiring you.ogg
+
+- type: jukebox
+  id: MikeKlubnikaSocketCalibration
+  name: Mike Klubnika - Socket Calibration
+  path:
+    path: /Audio/_Egide/Music/Mike Klubnika - Socket Calibration.ogg
+
+- type: jukebox
+  id: MikeKlubnikaGeneralRelease
+  name: Mike Klubnika - General Release
+  path:
+    path: /Audio/_Egide/Music/Mike Klubnika - General Release.ogg
+
+- type: jukebox
+  id: MikeKlubnikaBlankShell
+  name: Mike Klubnika - Blank Shell
+  path:
+    path: /Audio/_Egide/Music/Mike Klubnika - Blank Shell.ogg
+
+- type: jukebox
+  id: MikeKlubnikaBeforeEveryLoad
+  name: Mike Klubnika - Before Every Load
+  path:
+    path: /Audio/_Egide/Music/Mike Klubnika - Before Every Load.ogg
+
+- type: jukebox
+  id: MikeKlubnika70K
+  name: Mike Klubnika - 70K
+  path:
+    path: /Audio/_Egide/Music/Mike Klubnika - 70K.ogg
+
+- type: jukebox
+  id: KongosWithMeNow
+  name: KONGOS - with Me Now
+  path:
+    path: /Audio/_Egide/Music/KONGOS - with Me Now.ogg
+
+- type: jukebox
+  id: KaneParsonsStillLife
+  name: Kane Parsons - Still Life
+  path:
+    path: /Audio/_Egide/Music/Kane Parsons - Still Life.ogg
+
+- type: jukebox
+  id: KaneParsonsHandprint
+  name: Kane Parsons - Handprint
+  path:
+    path: /Audio/_Egide/Music/Kane Parsons - Handprint.ogg
+
+- type: jukebox
+  id: JagwarTwinHappyFace
+  name: Jagwar Twin - Happy Face
+  path:
+    path: /Audio/_Egide/Music/Jagwar Twin - Happy Face.ogg
+
+- type: jukebox
+  id: ImagineDragonsBones
+  name: Imagine Dragons - Bones
+  path:
+    path: /Audio/_Egide/Music/Imagine Dragons - Bones.ogg
+
+- type: jukebox
+  id: GogolBordelloMyCompanjera
+  name: Gogol Bordello - My Companjera
+  path:
+    path: /Audio/_Egide/Music/Gogol Bordello - My Companjera.ogg
+
+- type: jukebox
+  id: GabemtnzGlitchInYourHeart
+  name: gabemtnz - GLITCH IN YOUR HEART
+  path:
+    path: /Audio/_Egide/Music/gabemtnz - GLITCH IN YOUR HEART.ogg
+
+- type: jukebox
+  id: FemtanylPushUrT3mprr
+  name: Femtanyl - PUSH UR T3MPRR
+  path:
+    path: /Audio/_Egide/Music/Femtanyl - PUSH UR T3MPRR.ogg
+
+- type: jukebox
+  id: FemtanylP3T
+  name: Femtanyl - P3T
+  path:
+    path: /Audio/_Egide/Music/Femtanyl - P3T.ogg
+
+- type: jukebox
+  id: FemtanylLovesickCannibal
+  name: Femtanyl - LOVESICK, CANNIBAL!
+  path:
+    path: /Audio/_Egide/Music/Femtanyl - LOVESICK, CANNIBAL!.ogg
+
+- type: jukebox
+  id: FemtanylGirlHell1999
+  name: Femtanyl - GIRL HELL 1999
+  path:
+    path: /Audio/_Egide/Music/Femtanyl - GIRL HELL 1999.ogg
+
+- type: jukebox
+  id: CutCapersOneMoreDrink
+  name: Cut Capers - One More Drink
+  path:
+    path: /Audio/_Egide/Music/Cut Capers - One More Drink.ogg
+
+- type: jukebox
+  id: ChrmbchrmbMatrix
+  name: chrmbchrmb - matrix
+  path:
+    path: /Audio/_Egide/Music/chrmbchrmb - matrix.ogg
+
+- type: jukebox
+  id: C418MinecraftVolumeAlpha
+  name: C418 - Minecraft Volume Alpha
+  path:
+    path: /Audio/_Egide/Music/C418 - Minecraft Volume Alpha.ogg
+
+- type: jukebox
+  id: C418Beta
+  name: C418 - Beta
+  path:
+    path: /Audio/_Egide/Music/C418 - Beta.ogg
+
+- type: jukebox
+  id: AbbaGimmeGimmeGimme
+  name: ABBA - Gimme! Gimme! Gimme!
+  path:
+    path: /Audio/_Egide/Music/ABBA - Gimme! Gimme! Gimme!.ogg
+
+- type: jukebox
+  id: NinetysOrTwentiesCartoonsKwikFlipYtpmv
+  name: 90's or 20's cartoons - Kwik Flip _ YTPMV
+  path:
+    path: /Audio/_Egide/Music/90's or 20's cartoons - Kwik Flip _ YTPMV.ogg
