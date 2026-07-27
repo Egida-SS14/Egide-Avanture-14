@@ -2,7 +2,7 @@ using Content.Server.GameTicking;
 using Content.Server.Voting.Managers;
 using Content.Shared.Voting;
 
-namespace Content.Server._Egide.AutoLobbyVote;
+namespace Content.Server._Egide.AutoLobbyVote
 {
     /// <summary>
     /// Система для автоматического запуска голосований за карту и режим при переходе в лобби.

@@ -1,0 +1,34 @@
+# ========================
+# Проигрыватель
+# ========================
+
+- type: entity
+  parent: BaseItem
+  id: TapePlayerDevice
+  name: tape player
+  description: A portable device for playing music.
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/communication.rsi
+    layers:
+    - state: walkietalkie
+      map: ["enum.TapePlayerVisualLayers.Base"]
+  - type: Item
+    size: Small
+  - type: TapePlayer
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.TapePlayerVisuals.State:
+        enum.TapePlayerVisualLayers.Base:
+          Off: { state: "walkietalkie" }
+          On: { state: "walkietalkie-on" }
+          Rewinding: { state: "walkietalkie-active" }
+  - type: ActivatableUI
+    key: enum.TapePlayerUiKey.Key
+    inHandsOnly: false
+    requireActiveHand: false
+  - type: UserInterface
+    interfaces:
+      enum.TapePlayerUiKey.Key:
+        type: TapePlayerBoundUserInterface

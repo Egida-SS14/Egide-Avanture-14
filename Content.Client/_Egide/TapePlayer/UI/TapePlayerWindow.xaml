@@ -1,0 +1,69 @@
+<controls:FancyWindow
+    xmlns="https://spacestation14.io"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls;assembly=Content.Client"
+    MinSize="620 500"
+    SetSize="800 620"
+    Title="{Loc 'tape-player-menu-title'}"
+    Resizable="True">
+    <BoxContainer Margin="8 4" Orientation="Vertical" SeparationOverride="4" VerticalExpand="True">
+        <BoxContainer Orientation="Vertical">
+            <Label Name="SongNameLabel"
+                   Text="---"
+                   MaxWidth="360"
+                   RectClipContent="True"
+                   HorizontalExpand="True" />
+            <BoxContainer Orientation="Horizontal">
+                <Label Name="DurationLabel"
+                       Text="00:00 / 00:00"
+                       HorizontalAlignment="Right" />
+            </BoxContainer>
+            <Slider Name="PlaybackSlider"
+                    HorizontalExpand="True"
+                    MinValue="0"
+                    MaxValue="1" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+            <Button Name="PlayButton"
+                    Text="{Loc 'tape-player-menu-button-play'}"
+                    MinSize="80 0" />
+            <Button Name="StopButton"
+                    Text="{Loc 'tape-player-menu-button-stop'}"
+                    MinSize="80 0" />
+            <BoxContainer Orientation="Horizontal"
+                          HorizontalAlignment="Right"
+                          HorizontalExpand="True"
+                          Align="End">
+                <Label Name="VolumeLabel"
+                       Text="{Loc 'tape-player-menu-volume'}" />
+                <Slider Name="VolumeSlider"
+                        SetWidth="100"
+                        MinValue="0"
+                        MaxValue="100" />
+            </BoxContainer>
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True" VerticalExpand="True">
+            <BoxContainer Orientation="Vertical" HorizontalExpand="True">
+                <Label Text="{Loc 'tape-player-menu-category'}"
+                       StyleClasses="StatusFieldTitle" />
+                <ScrollContainer Name="CategoryScroll"
+                                 VerticalExpand="True"
+                                 HorizontalExpand="True">
+                    <BoxContainer Name="CategoryTree"
+                                  Orientation="Vertical"
+                                  HorizontalExpand="True" />
+                </ScrollContainer>
+            </BoxContainer>
+            <BoxContainer Orientation="Vertical" HorizontalExpand="True">
+                <Label Text="{Loc 'tape-player-menu-songs'}"
+                       StyleClasses="StatusFieldTitle" />
+                <ScrollContainer Name="SongScroll"
+                                 VerticalExpand="True"
+                                 HorizontalExpand="True">
+                    <BoxContainer Name="SongTree"
+                                  Orientation="Vertical"
+                                  HorizontalExpand="True" />
+                </ScrollContainer>
+            </BoxContainer>
+        </BoxContainer>
+    </BoxContainer>
+</controls:FancyWindow>
