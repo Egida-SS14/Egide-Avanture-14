@@ -2,12 +2,15 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
 name: .NET
-
 on:
   push:
-    branches: [ "master" ]
+    paths:
+      - "Content/**"
+      - "RobustToolbox/**"
   pull_request:
-    branches: [ "master" ]
+    paths:
+      - "Content/**"
+      - "RobustToolbox/**"
 
 jobs:
   build:
@@ -16,6 +19,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        fetch-depth: 0
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
