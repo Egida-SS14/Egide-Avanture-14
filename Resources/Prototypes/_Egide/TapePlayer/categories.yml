@@ -1,0 +1,46 @@
+- type: tapeCategory
+  id: music
+  name: "Музыка"
+  sortOrder: 0
+
+- type: tapeCategory
+  id: musicElectronic
+  name: "Электроника"
+  parentId: music
+  sortOrder: 0
+
+- type: tapeCategory
+  id: musicGameMusic
+  name: "Игровая музыка"
+  parentId: music
+  sortOrder: 1
+
+- type: tapeCategory
+  id: musicOther
+  name: "Другое"
+  parentId: music
+  sortOrder: 2
+
+- type: tapeCategory
+  id: musicPopAndDance
+  name: "Поп и Танцевальная"
+  parentId: music
+  sortOrder: 3
+
+- type: tapeCategory
+  id: musicRussianRockAndPunk
+  name: "Русский рок и панк"
+  parentId: music
+  sortOrder: 4
+
+- type: tapeCategory
+  id: musicWesternRock
+  name: "Западный рок"
+  parentId: music
+  sortOrder: 5
+
+- type: tapeCategory
+  id: musicStation
+  name: "Музыка станции"
+  parentId: music
+  sortOrder: 6

@@ -1,0 +1,752 @@
+- type: musicTape
+  id: music_001_90_s_or_20_s_cartoons___Kwik_Flip___YTPMV
+  songName: "90's or 20's cartoons - Kwik Flip _ YTPMV"
+  categoryId: musicOther
+  sound: /Audio/_Egide/Music/90's or 20's cartoons - Kwik Flip _ YTPMV.ogg
+
+- type: musicTape
+  id: music_002_ABBA___Gimme__Gimme__Gimme_
+  songName: "ABBA - Gimme! Gimme! Gimme!"
+  categoryId: musicPopAndDance
+  sound: /Audio/_Egide/Music/ABBA - Gimme! Gimme! Gimme!.ogg
+
+- type: musicTape
+  id: music_003_C418___Beta
+  songName: "C418 - Beta"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/C418 - Beta.ogg
+
+- type: musicTape
+  id: music_004_C418___Minecraft_Volume_Alpha
+  songName: "C418 - Minecraft Volume Alpha"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/C418 - Minecraft Volume Alpha.ogg
+
+- type: musicTape
+  id: music_005_chrmbchrmb___matrix
+  songName: "chrmbchrmb - matrix"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/chrmbchrmb - matrix.ogg
+
+- type: musicTape
+  id: music_006_Cut_Capers___One_More_Drink
+  songName: "Cut Capers - One More Drink"
+  categoryId: musicOther
+  sound: /Audio/_Egide/Music/Cut Capers - One More Drink.ogg
+
+- type: musicTape
+  id: music_008_Femtanyl___GIRL_HELL_1999
+  songName: "Femtanyl - GIRL HELL 1999"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/Femtanyl - GIRL HELL 1999.ogg
+
+- type: musicTape
+  id: music_009_Femtanyl___LOVESICK,_CANNIBAL!
+  songName: "Femtanyl - LOVESICK, CANNIBAL!"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/Femtanyl - LOVESICK, CANNIBAL!.ogg
+
+- type: musicTape
+  id: music_010_Femtanyl___P3T
+  songName: "Femtanyl - P3T"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/Femtanyl - P3T.ogg
+
+- type: musicTape
+  id: music_011_Femtanyl___PUSH_UR_T3MPRR
+  songName: "Femtanyl - PUSH UR T3MPRR"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/Femtanyl - PUSH UR T3MPRR.ogg
+
+- type: musicTape
+  id: music_012_gabemtnz___GLITCH_IN_YOUR_HEART
+  songName: "gabemtnz - GLITCH IN YOUR HEART"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/gabemtnz - GLITCH IN YOUR HEART.ogg
+
+- type: musicTape
+  id: music_013_Gogol_Bordello___My_Companjera
+  songName: "Gogol Bordello - My Companjera"
+  categoryId: musicOther
+  sound: /Audio/_Egide/Music/Gogol Bordello - My Companjera.ogg
+
+- type: musicTape
+  id: music_014_Gorillaz___Dirty_Harry
+  songName: "Gorillaz - Dirty Harry"
+  categoryId: musicOther
+  sound: /Audio/_Egide/Music/Gorillaz - Dirty Harry.ogg
+
+- type: musicTape
+  id: music_015_Gorillaz___Feel_Good_Inc_
+  songName: "Gorillaz - Feel Good Inc."
+  categoryId: musicOther
+  sound: /Audio/_Egide/Music/Gorillaz - Feel Good Inc..ogg
+
+- type: musicTape
+  id: music_016_Imagine_Dragons___Bones
+  songName: "Imagine Dragons - Bones"
+  categoryId: musicWesternRock
+  sound: /Audio/_Egide/Music/Imagine Dragons - Bones.ogg
+
+- type: musicTape
+  id: music_017_Jagwar_Twin___Happy_Face
+  songName: "Jagwar Twin - Happy Face"
+  categoryId: musicPopAndDance
+  sound: /Audio/_Egide/Music/Jagwar Twin - Happy Face.ogg
+
+- type: musicTape
+  id: music_018_Kane_Parsons___Handprint
+  songName: "Kane Parsons - Handprint"
+  categoryId: musicOther
+  sound: /Audio/_Egide/Music/Kane Parsons - Handprint.ogg
+
+- type: musicTape
+  id: music_019_Kane_Parsons___Still_Life
+  songName: "Kane Parsons - Still Life"
+  categoryId: musicOther
+  sound: /Audio/_Egide/Music/Kane Parsons - Still Life.ogg
+
+- type: musicTape
+  id: music_020_KONGOS___with_Me_Now
+  songName: "KONGOS - with Me Now"
+  categoryId: musicWesternRock
+  sound: /Audio/_Egide/Music/KONGOS - with Me Now.ogg
+
+- type: musicTape
+  id: music_021_MANUEL___GAS_GAS_GAS
+  songName: "MANUEL - GAS GAS GAS"
+  categoryId: musicPopAndDance
+  sound: /Audio/_Egide/Music/MANUEL - GAS GAS GAS.ogg
+
+- type: musicTape
+  id: music_022_Mike_Klubnika___70K
+  songName: "Mike Klubnika - 70K"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/Mike Klubnika - 70K.ogg
+
+- type: musicTape
+  id: music_023_Mike_Klubnika___Before_Every_Load
+  songName: "Mike Klubnika - Before Every Load"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/Mike Klubnika - Before Every Load.ogg
+
+- type: musicTape
+  id: music_024_Mike_Klubnika___Blank_Shell
+  songName: "Mike Klubnika - Blank Shell"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/Mike Klubnika - Blank Shell.ogg
+
+- type: musicTape
+  id: music_025_Mike_Klubnika___General_Release
+  songName: "Mike Klubnika - General Release"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/Mike Klubnika - General Release.ogg
+
+- type: musicTape
+  id: music_026_Mike_Klubnika___Socket_Calibration
+  songName: "Mike Klubnika - Socket Calibration"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/Mike Klubnika - Socket Calibration.ogg
+
+- type: musicTape
+  id: music_027_M_O_O_N___Crystals
+  songName: "M_O_O_N - Crystals"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/M_O_O_N - Crystals.ogg
+
+- type: musicTape
+  id: music_028_M_O_O_N___Dust
+  songName: "M_O_O_N - Dust"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/M_O_O_N - Dust.ogg
+
+- type: musicTape
+  id: music_029_M_O_O_N___Hydrogen
+  songName: "M_O_O_N - Hydrogen"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/M_O_O_N - Hydrogen.ogg
+
+- type: musicTape
+  id: music_030_M_O_O_N___Paris
+  songName: "M_O_O_N - Paris"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/M_O_O_N - Paris.ogg
+
+- type: musicTape
+  id: music_031_Private_Pure_Love_Train___Admiring_you
+  songName: "Private Pure Love Train - Admiring you"
+  categoryId: musicOther
+  sound: /Audio/_Egide/Music/Private Pure Love Train - Admiring you.ogg
+
+- type: musicTape
+  id: music_032_RoyalRepublic___Tommy_Gun
+  songName: "RoyalRepublic - Tommy-Gun"
+  categoryId: musicWesternRock
+  sound: /Audio/_Egide/Music/RoyalRepublic - Tommy-Gun.ogg
+
+- type: musicTape
+  id: music_033_RoyalRepublic___Weekend_Man
+  songName: "RoyalRepublic - Weekend-Man"
+  categoryId: musicWesternRock
+  sound: /Audio/_Egide/Music/RoyalRepublic - Weekend-Man.ogg
+
+- type: musicTape
+  id: music_034_Sin_Shake_Sin___Can_t_Go_To_Hell
+  songName: "Sin Shake Sin - Can't Go To Hell"
+  categoryId: musicWesternRock
+  sound: /Audio/_Egide/Music/Sin Shake Sin - Can't Go To Hell.ogg
+
+- type: musicTape
+  id: music_035_Sonic_Spark___The_Beach
+  songName: "Sonic Spark - The Beach"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/Sonic Spark - The Beach.ogg
+
+- type: musicTape
+  id: music_036_Technotronic___Pump_Up_The_Jam
+  songName: "Technotronic - Pump Up The Jam"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/Technotronic - Pump Up The Jam.ogg
+
+- type: musicTape
+  id: music_037_That_Handsome_Devil___Charlie_s_Inferno
+  songName: "That Handsome Devil - Charlie's Inferno"
+  categoryId: musicWesternRock
+  sound: /Audio/_Egide/Music/That Handsome Devil - Charlie's Inferno.ogg
+
+- type: musicTape
+  id: music_038_That_Handsome_Devil___The_U___I_In_Suicide
+  songName: "That Handsome Devil - The U & I In Suicide"
+  categoryId: musicWesternRock
+  sound: /Audio/_Egide/Music/That Handsome Devil - The U & I In Suicide.ogg
+
+- type: musicTape
+  id: music_039_THE_BOSSHOSS___Word_Up
+  songName: "THE BOSSHOSS - Word Up"
+  categoryId: musicWesternRock
+  sound: /Audio/_Egide/Music/THE BOSSHOSS - Word Up.ogg
+
+- type: musicTape
+  id: music_040_The_Caretaker___A1___It_s_just_a_burning_memory
+  songName: "The Caretaker - A1 – It's just a burning memory"
+  categoryId: musicOther
+  sound: /Audio/_Egide/Music/The Caretaker - A1 – It's just a burning memory.ogg
+
+- type: musicTape
+  id: music_041_The_Caretaker___A2___We_don_t_have_many_days
+  songName: "The Caretaker - A2 – We don't have many days"
+  categoryId: musicOther
+  sound: /Audio/_Egide/Music/The Caretaker - A2 – We don't have many days.ogg
+
+- type: musicTape
+  id: music_042_The_Caretaker___B6___My_heart_will_stop_in_joy
+  songName: "The Caretaker - B6 – My heart will stop in joy"
+  categoryId: musicOther
+  sound: /Audio/_Egide/Music/The Caretaker - B6 – My heart will stop in joy.ogg
+
+- type: musicTape
+  id: music_043_The_Caretaker___Libet_s_delay
+  songName: "The Caretaker - Libet's delay"
+  categoryId: musicOther
+  sound: /Audio/_Egide/Music/The Caretaker - Libet's delay.ogg
+
+- type: musicTape
+  id: music_044_The_Heavy____The_Apology_
+  songName: "The Heavy - 'The Apology'"
+  categoryId: musicWesternRock
+  sound: /Audio/_Egide/Music/The Heavy - 'The Apology'.ogg
+
+- type: musicTape
+  id: music_045_The_Living_Tombstone___Die_In_A_Fire
+  songName: "The Living Tombstone - Die In A Fire"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/The Living Tombstone - Die In A Fire.ogg
+
+- type: musicTape
+  id: music_046_The_Living_Tombstone___Discord
+  songName: "The Living Tombstone - Discord"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/The Living Tombstone - Discord.ogg
+
+- type: musicTape
+  id: music_047_The_Living_Tombstone___I_Can_t_Fix_You
+  songName: "The Living Tombstone - I Can't Fix You"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/The Living Tombstone - I Can't Fix You.ogg
+
+- type: musicTape
+  id: music_048_The_Living_Tombstone___It_s_Been_So_Long
+  songName: "The Living Tombstone - It's Been So Long"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/The Living Tombstone - It's Been So Long.ogg
+
+- type: musicTape
+  id: music_049_The_Living_Tombstone___My_Ordinary_Life
+  songName: "The Living Tombstone - My Ordinary Life"
+  categoryId: musicElectronic
+  sound: /Audio/_Egide/Music/The Living Tombstone - My Ordinary Life.ogg
+
+- type: musicTape
+  id: music_050_The_Long_Faces___Jane_
+  songName: "The Long Faces - Jane!"
+  categoryId: musicWesternRock
+  sound: /Audio/_Egide/Music/The Long Faces - Jane!.ogg
+
+- type: musicTape
+  id: music_051_Toby_Fox___A_DARK_ZONE
+  songName: "Toby Fox - A DARK ZONE"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - A DARK ZONE.ogg
+
+- type: musicTape
+  id: music_052_Toby_Fox___BIG_SHOT
+  songName: "Toby Fox - BIG SHOT"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - BIG SHOT.ogg
+
+- type: musicTape
+  id: music_053_Toby_Fox___Black_Knife
+  songName: "Toby Fox - Black Knife"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - Black Knife.ogg
+
+- type: musicTape
+  id: music_054_Toby_Fox___BURNING_EYES
+  songName: "Toby Fox - BURNING EYES"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - BURNING EYES.ogg
+
+- type: musicTape
+  id: music_055_Toby_Fox___Cutie_Mew_Mew_Magic
+  songName: "Toby Fox - Cutie Mew Mew Magic"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - Cutie Mew Mew Magic.ogg
+
+- type: musicTape
+  id: music_056_Toby_Fox___Dialtone
+  songName: "Toby Fox - Dialtone"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - Dialtone.ogg
+
+- type: musicTape
+  id: music_057_Toby_Fox___Finale
+  songName: "Toby Fox - Finale"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - Finale.ogg
+
+- type: musicTape
+  id: music_058_Toby_Fox___Flower_Man
+  songName: "Toby Fox - Flower Man"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - Flower Man.ogg
+
+- type: musicTape
+  id: music_059_Toby_Fox___GLACEIR
+  songName: "Toby Fox - GLACEIR"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - GLACEIR.ogg
+
+- type: musicTape
+  id: music_060_Toby_Fox___Hopes_And_Dreams
+  songName: "Toby Fox - Hopes And Dreams"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - Hopes And Dreams.ogg
+
+- type: musicTape
+  id: music_061_Toby_Fox___It_s_TV_Time_
+  songName: "Toby Fox - It's TV Time!"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - It's TV Time!.ogg
+
+- type: musicTape
+  id: music_062_Toby_Fox___MEGALOVANIA
+  songName: "Toby Fox - MEGALOVANIA"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - MEGALOVANIA.ogg
+
+- type: musicTape
+  id: music_063_Toby_Fox___My_Castle_Town
+  songName: "Toby Fox - My Castle Town"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - My Castle Town.ogg
+
+- type: musicTape
+  id: music_064_Toby_Fox___Neverending_Night
+  songName: "Toby Fox - Neverending Night"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - Neverending Night.ogg
+
+- type: musicTape
+  id: music_065_Toby_Fox___NOW_S_YOUR_CHANCE_TO_BE_A
+  songName: "Toby Fox - NOW'S YOUR CHANCE TO BE A"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - NOW'S YOUR CHANCE TO BE A.ogg
+
+- type: musicTape
+  id: music_066_Toby_Fox___Raise_Up_Your_Bat
+  songName: "Toby Fox - Raise Up Your Bat"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - Raise Up Your Bat.ogg
+
+- type: musicTape
+  id: music_067_Toby_Fox___The_Third_Sanctuary
+  songName: "Toby Fox - The Third Sanctuary"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - The Third Sanctuary.ogg
+
+- type: musicTape
+  id: music_068_Toby_Fox___THE_WORLD_REVOLVING
+  songName: "Toby Fox - THE WORLD REVOLVING"
+  categoryId: musicGameMusic
+  sound: /Audio/_Egide/Music/Toby Fox - THE WORLD REVOLVING.ogg
+
+- type: musicTape
+  id: music_069_Wang_Chung___Everybody_Have_Fun_Tonight
+  songName: "Wang Chung - Everybody Have Fun Tonight"
+  categoryId: musicPopAndDance
+  sound: /Audio/_Egide/Music/Wang Chung - Everybody Have Fun Tonight.ogg
+
+- type: musicTape
+  id: music_070_Who_s_Who___Ulterior_motives
+  songName: "Who's Who - Ulterior motives"
+  categoryId: musicWesternRock
+  sound: /Audio/_Egide/Music/Who's Who - Ulterior motives.ogg
+
+- type: musicTape
+  id: music_071_ZZtop___Sharp_Dressed_Man_2019
+  songName: "ZZtop - Sharp Dressed Man 2019"
+  categoryId: musicWesternRock
+  sound: /Audio/_Egide/Music/ZZtop - Sharp Dressed Man 2019.ogg
+
+- type: musicTape
+  id: music_072_Агата_Кристи___Как_на_войне
+  songName: "Агата Кристи - Как на войне"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Агата Кристи - Как на войне.ogg
+
+- type: musicTape
+  id: music_073_Агата_Кристи___опиум_для_никого
+  songName: "Агата Кристи - опиум для никого"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Агата Кристи - опиум для никого.ogg
+
+- type: musicTape
+  id: music_074_Гражданская_оборона___Беспонтовый_пирожок
+  songName: "Гражданская оборона - Беспонтовый пирожок"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Гражданская оборона - Беспонтовый пирожок.ogg
+
+- type: musicTape
+  id: music_075_Гражданская_оборона___Всё_идёт_по_плану
+  songName: "Гражданская оборона - Всё идёт по плану"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Гражданская оборона - Всё идёт по плану.ogg
+
+- type: musicTape
+  id: music_076_Гражданская_оборона___Далеко_бежит_дорога
+  songName: "Гражданская оборона - Далеко бежит дорога"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Гражданская оборона - Далеко бежит дорога.ogg
+
+- type: musicTape
+  id: music_077_Гражданская_оборона___Долгая_счастливая_жизнь
+  songName: "Гражданская оборона - Долгая счастливая жизнь"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Гражданская оборона - Долгая счастливая жизнь.ogg
+
+- type: musicTape
+  id: music_078_Гражданская_оборона___Мёртвые
+  songName: "Гражданская оборона - Мёртвые"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Гражданская оборона - Мёртвые.ogg
+
+- type: musicTape
+  id: music_079_Гражданская_оборона___Отряд_не_заметил_потери_бойца
+  songName: "Гражданская оборона - Отряд не заметил потери бойца"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Гражданская оборона - Отряд не заметил потери бойца.ogg
+
+- type: musicTape
+  id: music_080_Гражданская_оборона___Убивать
+  songName: "Гражданская оборона - Убивать"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Гражданская оборона - Убивать.ogg
+
+- type: musicTape
+  id: music_081_егорbez___Kah
+  songName: "егорbez - Kah"
+  categoryId: musicOther
+  sound: /Audio/_Egide/Music/егорbez - Kah.ogg
+
+- type: musicTape
+  id: music_082_Инструкция_по___Не_осталось_никого
+  songName: "Инструкция по - Не осталось никого"
+  categoryId: musicOther
+  sound: /Audio/_Egide/Music/Инструкция по - Не осталось никого.ogg
+
+- type: musicTape
+  id: music_083_Инструкция_по___Погляди_на_небо
+  songName: "Инструкция по - Погляди на небо"
+  categoryId: musicOther
+  sound: /Audio/_Egide/Music/Инструкция по - Погляди на небо.ogg
+
+- type: musicTape
+  id: music_084_КИНО___Восьмиклассница
+  songName: "КИНО - Восьмиклассница"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/КИНО - Восьмиклассница.ogg
+
+- type: musicTape
+  id: music_085_КИНО___Группа_крови
+  songName: "КИНО - Группа крови"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/КИНО - Группа крови.ogg
+
+- type: musicTape
+  id: music_086_КИНО___Звезда_по_имени_Солнце
+  songName: "КИНО - Звезда по имени Солнце"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/КИНО - Звезда по имени Солнце.ogg
+
+- type: musicTape
+  id: music_087_КИНО___Красно_жёлтые_дни
+  songName: "КИНО - Красно-жёлтые дни"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/КИНО - Красно-жёлтые дни.ogg
+
+- type: musicTape
+  id: music_088_КИНО___Кукушка
+  songName: "КИНО - Кукушка"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/КИНО - Кукушка.ogg
+
+- type: musicTape
+  id: music_089_КИНО___Лето
+  songName: "КИНО - Лето"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/КИНО - Лето.ogg
+
+- type: musicTape
+  id: music_090_КИНО___Мама
+  songName: "КИНО - Мама"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/КИНО - Мама.ogg
+
+- type: musicTape
+  id: music_091_КИНО___мы_все_тяжело_больны
+  songName: "КИНО - мы все тяжело больны"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/КИНО - мы все тяжело больны.ogg
+
+- type: musicTape
+  id: music_092_КИНО___Нам_с_тобой
+  songName: "КИНО - Нам с тобой"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/КИНО - Нам с тобой.ogg
+
+- type: musicTape
+  id: music_093_КИНО___Пачка_сигарет
+  songName: "КИНО - Пачка сигарет"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/КИНО - Пачка сигарет.ogg
+
+- type: musicTape
+  id: music_094_КИНО___Последний_герой
+  songName: "КИНО - Последний герой"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/КИНО - Последний герой.ogg
+
+- type: musicTape
+  id: music_095_КИНО___Следи_за_собой
+  songName: "КИНО - Следи за собой"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/КИНО - Следи за собой.ogg
+
+- type: musicTape
+  id: music_096_КИНО___Спокойная_ночь
+  songName: "КИНО - Спокойная ночь"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/КИНО - Спокойная ночь.ogg
+
+- type: musicTape
+  id: music_097_КИНО___Стук
+  songName: "КИНО - Стук"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/КИНО - Стук.ogg
+
+- type: musicTape
+  id: music_098_КИНО___Хочу_перемен
+  songName: "КИНО - Хочу перемен"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/КИНО - Хочу перемен.ogg
+
+- type: musicTape
+  id: music_099_КИНО___Электричка
+  songName: "КИНО - Электричка"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/КИНО - Электричка.ogg
+
+- type: musicTape
+  id: music_100_Король_и_Шут___Ведьма_и_Осёл
+  songName: "Король и Шут - Ведьма и Осёл"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Король и Шут - Ведьма и Осёл.ogg
+
+- type: musicTape
+  id: music_101_Король_и_Шут___Два_вора_и_монета
+  songName: "Король и Шут - Два вора и монета"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Король и Шут - Два вора и монета.ogg
+
+- type: musicTape
+  id: music_102_Король_и_Шут___Дурак_и_молния
+  songName: "Король и Шут - Дурак и молния"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Король и Шут - Дурак и молния.ogg
+
+- type: musicTape
+  id: music_103_Король_и_Шут___Ели_мясо_мужики
+  songName: "Король и Шут - Ели мясо мужики"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Король и Шут - Ели мясо мужики.ogg
+
+- type: musicTape
+  id: music_104_Король_и_Шут___Кукла_колдуна
+  songName: "Король и Шут - Кукла колдуна"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Король и Шут - Кукла колдуна.ogg
+
+- type: musicTape
+  id: music_105_Король_и_Шут___Лесник
+  songName: "Король и Шут - Лесник"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Король и Шут - Лесник.ogg
+
+- type: musicTape
+  id: music_106_Король_и_Шут___Марионетки
+  songName: "Король и Шут - Марионетки"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Король и Шут - Марионетки.ogg
+
+- type: musicTape
+  id: music_107_Король_и_Шут___Проклятый_старый_дом
+  songName: "Король и Шут - Проклятый старый дом"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Король и Шут - Проклятый старый дом.ogg
+
+- type: musicTape
+  id: music_108_Король_и_Шут___Прыгну_со_скалы
+  songName: "Король и Шут - Прыгну со скалы"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Король и Шут - Прыгну со скалы.ogg
+
+- type: musicTape
+  id: music_109_Король_и_Шут___Танец_злобного_гения
+  songName: "Король и Шут - Танец злобного гения"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Король и Шут - Танец злобного гения.ogg
+
+- type: musicTape
+  id: music_110_Король_и_Шут___Утренний_рассвет
+  songName: "Король и Шут - Утренний рассвет"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Король и Шут - Утренний рассвет.ogg
+
+- type: musicTape
+  id: music_111_Король_и_Шут___Хозяин_леса
+  songName: "Король и Шут - Хозяин леса"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Король и Шут - Хозяин леса.ogg
+
+- type: musicTape
+  id: music_112_Молчат_дома___Волны
+  songName: "Молчат дома - Волны"
+  sound: /Audio/_Egide/Music/Молчат дома - Волны.ogg
+
+- type: musicTape
+  id: music_113_Молчат_дома___Дискотека
+  songName: "Молчат дома - Дискотека"
+  sound: /Audio/_Egide/Music/Молчат дома - Дискотека.ogg
+
+- type: musicTape
+  id: music_114_Молчат_дома___Звёзды
+  songName: "Молчат дома - Звёзды"
+  sound: /Audio/_Egide/Music/Молчат дома - Звёзды.ogg
+
+- type: musicTape
+  id: music_115_Молчат_дома___Клетка
+  songName: "Молчат дома - Клетка"
+  sound: /Audio/_Egide/Music/Молчат дома - Клетка.ogg
+
+- type: musicTape
+  id: music_116_Молчат_дома___Крыши
+  songName: "Молчат дома - Крыши"
+  sound: /Audio/_Egide/Music/Молчат дома - Крыши.ogg
+
+- type: musicTape
+  id: music_117_Молчат_дома___Люди_надоели
+  songName: "Молчат дома - Люди надоели"
+  sound: /Audio/_Egide/Music/Молчат дома - Люди надоели.ogg
+
+- type: musicTape
+  id: music_118_Молчат_дома___Обречён
+  songName: "Молчат дома - Обречён"
+  sound: /Audio/_Egide/Music/Молчат дома - Обречён.ogg
+
+- type: musicTape
+  id: music_119_Молчат_дома___Ответа_нет
+  songName: "Молчат дома - Ответа нет"
+  sound: /Audio/_Egide/Music/Молчат дома - Ответа нет.ogg
+
+- type: musicTape
+  id: music_120_Молчат_дома___Судно_борис_рижий
+  songName: "Молчат дома - Судно борис рижий"
+  sound: /Audio/_Egide/Music/Молчат дома - Судно борис рижий.ogg
+
+- type: musicTape
+  id: music_121_Молчат_дома___Танцевать
+  songName: "Молчат дома - Танцевать"
+  sound: /Audio/_Egide/Music/Молчат дома - Танцевать.ogg
+
+- type: musicTape
+  id: music_122_Молчат_дома___Технология
+  songName: "Молчат дома - Технология"
+  sound: /Audio/_Egide/Music/Молчат дома - Технология.ogg
+
+- type: musicTape
+  id: music_123_Молчат_дома___Тишина
+  songName: "Молчат дома - Тишина"
+  sound: /Audio/_Egide/Music/Молчат дома - Тишина.ogg
+
+- type: musicTape
+  id: music_124_Молчат_дома___Тоска
+  songName: "Молчат дома - Тоска"
+  sound: /Audio/_Egide/Music/Молчат дома - Тоска.ogg
+
+- type: musicTape
+  id: music_125_Молчат_дома___Утонуть
+  songName: "Молчат дома - Утонуть"
+  sound: /Audio/_Egide/Music/Молчат дома - Утонуть.ogg
+
+- type: musicTape
+  id: music_126_Молчат_дома___Я_не_коммунист
+  songName: "Молчат дома - Я не коммунист"
+  sound: /Audio/_Egide/Music/Молчат дома - Я не коммунист.ogg
+
+- type: musicTape
+  id: music_127_Сектор_Газа___Бомж
+  songName: "Сектор Газа - Бомж"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Сектор Газа - Бомж.ogg
+
+- type: musicTape
+  id: music_128_Сектор_Газа___Русский_мат
+  songName: "Сектор Газа - Русский мат"
+  categoryId: musicRussianRockAndPunk
+  sound: /Audio/_Egide/Music/Сектор Газа - Русский мат.ogg
+
+- type: musicTape
+  id: music_station_129_sunset
+  songName: "sunset"
+  categoryId: musicStation
+  sound: /Audio/Jukebox/sunset.ogg
