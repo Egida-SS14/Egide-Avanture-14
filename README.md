@@ -1,9 +1,4 @@
-<h1 align="center"> <img alt="Orion Station" width="420" height="120" src="https://raw.githubusercontent.com/AtaraxiaSpaceFoundation/asset-dump/refs/heads/master/OrionStation/Orion-Banner-Big.png" /> </h1>
-
-<p align="center">
-  Ваш проводник в космический симулятор безумия!<br>
-  Основан на идеях <a href="https://github.com/tgstation/tgstation">/tg/station</a> и <a href="https://github.com/shiptest-ss13/Shiptest">Shiptest</a> из Space Station 13.
-</p>
+<h1 align="center"> <img alt="Egida" width="420" height="120" src="" /> </h1>
 
 <div align="center">
 
@@ -14,7 +9,7 @@
 
 ---
 
-Egide Avanture - это сервер в Space Station 14. Мы используем сборку на базе Orion, который в свою очередь базируется на сборке Goob Station.
+Egide - это проект в Space Station 14. Мы используем сборку на базе Orion, который в свою очередь базируется на сборке Goob Station.
 
 ---
 
