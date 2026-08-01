@@ -1,0 +1,25 @@
+guide-entry-egide = Эгида
+
+guide-entry-server-rules = Правила сервера
+guide-entry-server-rules-punishment = Наказания
+guide-entry-server-rules-rule-0 = Правило 0
+guide-entry-server-rules-rule-1 = Правило 1
+guide-entry-server-rules-rule-1-1 = Правило 1.1
+guide-entry-server-rules-rule-1-2 = Правило 1.2
+guide-entry-server-rules-rule-1-3 = Правило 1.3
+guide-entry-server-rules-rule-1-4 = Правило 1.4
+guide-entry-server-rules-rule-2 = Правило 2
+guide-entry-server-rules-rule-3 = Правило 3
+guide-entry-server-rules-rule-3-1 = Правило 3.1
+guide-entry-server-rules-rule-3-2 = Правило 3.2
+guide-entry-server-rules-rule-4 = Правило 4
+guide-entry-server-rules-rule-5 = Правило 5
+guide-entry-server-rules-rule-6 = Правило 6
+guide-entry-server-rules-rule-7 = Правило 7
+guide-entry-server-rules-rule-7-1 = Правило 7.1
+guide-entry-server-rules-rule-7-2 = Правило 7.2
+guide-entry-server-rules-rule-8 = Правило 8
+guide-entry-server-rules-rule-8-1 = Правило 8.1
+guide-entry-server-rules-rule-8-2 = Правило 8.2
+guide-entry-server-rules-rule-8-3 = Правило 8.3
+guide-entry-server-rules-rule-9 = Правило 9

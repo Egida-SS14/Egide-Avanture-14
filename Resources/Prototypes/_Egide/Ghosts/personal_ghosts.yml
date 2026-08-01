@@ -1,0 +1,17 @@
+- type: customGhost
+  parent: CkeyPersonal
+  id: Goouise-ghost
+  restrictions:
+  - !type:CkeyRestriction
+    ckey: [ Goouise ]
+  entity: MobObserver-Goouise
+
+- type: entity
+  parent: MobObserver
+  id: MobObserver-Goouise
+  description: Я уже загружаю ПЫР ПЫР патапима на сервер.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Egide/Ghosts/ckey/Goouise.rsi
+    color: "#ffffffe6" # 0.9 alpha

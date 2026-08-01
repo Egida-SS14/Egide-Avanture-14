@@ -14,7 +14,17 @@
       "name": "advancedsmes-static"
     },
     {
-      "name": "advancedsmes-open"
+      "name": "advancedsmes-open",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
     },
     {
       "name": "smes"

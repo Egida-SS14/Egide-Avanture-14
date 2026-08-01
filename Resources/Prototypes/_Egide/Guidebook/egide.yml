@@ -1,0 +1,8 @@
+- type: guideEntry
+  id: Egide
+  name: guide-entry-egide
+  text: "/ServerInfo/_Egide/Guidebook/Egide.xml"
+  priority: -1
+  children:
+  - EgideRuleset
+  - SpaceLaw
