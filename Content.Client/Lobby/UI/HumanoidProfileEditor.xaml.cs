@@ -168,6 +168,7 @@ using Content.Client.Sprite;
 using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared.CCVar;
+using Content.Shared._Egide.Preferences; // Egide edit
 using Content.Shared.Clothing;
 using Content.Shared.GameTicking;
 using Content.Shared.Guidebook;
@@ -318,6 +319,17 @@ namespace Content.Client.Lobby.UI
 
             _maxNameLength = _cfgManager.GetCVar(CCVars.MaxNameLength);
             _allowFlavorText = _cfgManager.GetCVar(CCVars.FlavorText);
+
+            // Egide edit - start
+            ErpStatusButton.AddItem(Loc.GetString("erp-status-none"), 0);
+            ErpStatusButton.AddItem(Loc.GetString("erp-status-incomplete"), 1);
+            ErpStatusButton.AddItem(Loc.GetString("erp-status-full"), 2);
+            ErpStatusButton.OnItemSelected += args =>
+            {
+                ErpStatusButton.Select(args.Id);
+                OnErpStatusChange(args.Id);
+            };
+            // Egide edit - end
 
             ImportButton.OnPressed += args =>
             {
@@ -1024,6 +1036,17 @@ namespace Content.Client.Lobby.UI
             UpdateFlavorPreview();
         }
         // Orion-End
+
+        // Egide edit - start
+        private void OnErpStatusChange(int status)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithErpStatus((ErpStatus)status);
+            SetDirty();
+        }
+        // Egide edit - end
 
         /// <summary>
         /// Refreshes traits selector
@@ -2034,6 +2057,10 @@ namespace Content.Client.Lobby.UI
 
             if (_nsfwTagsTextEdit != null)
                 _nsfwTagsTextEdit.TextRope = new Rope.Leaf(Profile?.NsfwTagsFlavorText ?? "");
+
+            // Egide edit - start
+            ErpStatusButton.SelectId((int)(Profile?.ErpStatus ?? ErpStatus.None));
+            // Egide edit - end
         }
         // Orion-Edit-End
 

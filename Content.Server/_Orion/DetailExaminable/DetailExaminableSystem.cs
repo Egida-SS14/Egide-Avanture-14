@@ -78,7 +78,8 @@ public sealed class DetailExaminableSystem : EntitySystem
             detail.NsfwContent,
             detail.NsfwOOCContent,
             detail.NsfwLinksContent,
-            detail.NsfwTagsContent
+            detail.NsfwTagsContent,
+            detail.ErpStatus // Egide edit
         );
 
         var window = new DetailExaminableEui(state);

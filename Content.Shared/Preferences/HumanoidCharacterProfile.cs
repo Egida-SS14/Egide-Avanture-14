@@ -51,6 +51,7 @@
 
 using System.Linq;
 using System.Text.RegularExpressions;
+using Content.Shared._Egide.Preferences; // Egide edit
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
 using Content.Shared.Humanoid;
@@ -155,6 +156,11 @@ namespace Content.Shared.Preferences
         public string NsfwTagsFlavorText { get; set; } = string.Empty;
         // Orion-End
 
+        // Egide edit - start
+        [DataField]
+        public ErpStatus ErpStatus { get; set; } = ErpStatus.None;
+        // Egide edit - end
+
         /// <summary>
         /// Associated <see cref="SpeciesPrototype"/> for this profile.
         /// </summary>
@@ -235,6 +241,7 @@ namespace Content.Shared.Preferences
             string nsfwlinksflavortext,
             string nsfwtagsflavortext,
             // Orion-End
+            ErpStatus erpStatus, // Egide edit
             string species,
             float height, // Goobstation: port EE height/width sliders
             float width, // Goobstation: port EE height/width sliders
@@ -265,6 +272,7 @@ namespace Content.Shared.Preferences
             NsfwLinksFlavorText = nsfwlinksflavortext;
             NsfwTagsFlavorText = nsfwtagsflavortext;
             // Orion-End
+            ErpStatus = erpStatus; // Egide edit
             Species = species;
             Height = height; // Goobstation: port EE height/width sliders
             Width = width; // Goobstation: port EE height/width sliders
@@ -312,6 +320,7 @@ namespace Content.Shared.Preferences
                 other.NsfwLinksFlavorText,
                 other.NsfwTagsFlavorText,
                 // Orion-End
+                other.ErpStatus, // Egide edit
                 other.Species,
                 other.Height, // Goobstation: port EE height/width sliders
                 other.Width, // Goobstation: port EE height/width sliders
@@ -490,6 +499,13 @@ namespace Content.Shared.Preferences
             return new(this) { NsfwTagsFlavorText = nsfwTagsFlavorText };
         }
         // Orion-End
+
+        // Egide edit - start
+        public HumanoidCharacterProfile WithErpStatus(ErpStatus erpStatus)
+        {
+            return new(this) { ErpStatus = erpStatus };
+        }
+        // Egide edit - end
 
         public HumanoidCharacterProfile WithAge(int age)
         {
@@ -721,6 +737,7 @@ namespace Content.Shared.Preferences
             if (NsfwLinksFlavorText != other.NsfwLinksFlavorText) return false;
             if (NsfwTagsFlavorText != other.NsfwTagsFlavorText) return false;
             // Orion-End
+            if (ErpStatus != other.ErpStatus) return false; // Egide edit
             return Appearance.MemberwiseEquals(other.Appearance);
         }
 
@@ -928,6 +945,11 @@ namespace Content.Shared.Preferences
             nsfwtags = FormatTags(nsfwtags);
             // Orion-End
 
+            // Egide edit - start
+            if (!Enum.IsDefined(ErpStatus))
+                ErpStatus = ErpStatus.None;
+            // Egide edit - end
+
             // begin Goobstation: port EE height/width sliders
             var height = Height;
             if (speciesPrototype != null)
@@ -1131,6 +1153,7 @@ namespace Content.Shared.Preferences
             hashCode.Add(NsfwLinksFlavorText);
             hashCode.Add(NsfwTagsFlavorText);
             // Orion-End
+            hashCode.Add(ErpStatus); // Egide edit
             hashCode.Add(Species);
             hashCode.Add(Height); // Goobstation: port EE height/width sliders
             hashCode.Add(Width); // Goobstation: port EE height/width sliders

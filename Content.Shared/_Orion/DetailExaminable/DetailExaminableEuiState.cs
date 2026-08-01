@@ -1,3 +1,4 @@
+using Content.Shared._Egide.Preferences; // Egide edit
 using Content.Shared.Eui;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
@@ -31,6 +32,7 @@ public sealed class DetailExaminableEuiState : EuiStateBase
     public string NsfwOOCFlavorText;
     public string NsfwLinksFlavorText;
     public string NsfwTagsFlavorText;
+    public ErpStatus ErpStatus; // Egide edit
 
     public DetailExaminableEuiState(
         NetEntity target,
@@ -49,7 +51,8 @@ public sealed class DetailExaminableEuiState : EuiStateBase
         string nsfwFlavorText,
         string nsfwOOCFlavorText,
         string nsfwLinksFlavorText,
-        string nsfwTagsFlavorText
+        string nsfwTagsFlavorText,
+        ErpStatus erpStatus // Egide edit
     )
     {
         Target = target;
@@ -69,5 +72,6 @@ public sealed class DetailExaminableEuiState : EuiStateBase
         NsfwOOCFlavorText = nsfwOOCFlavorText;
         NsfwLinksFlavorText = nsfwLinksFlavorText;
         NsfwTagsFlavorText = nsfwTagsFlavorText;
+        ErpStatus = erpStatus; // Egide edit
     }
 }

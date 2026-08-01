@@ -3,6 +3,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Shared._Egide.Preferences; // Egide edit
 using Content.Shared.Preferences;
 using Robust.Shared.GameStates;
 
@@ -48,6 +49,11 @@ public sealed partial class DetailExaminableComponent : Component
     [DataField, AutoNetworkedField]
     public string NsfwTagsContent { get; set; } = string.Empty;
 
+    // Egide edit - start
+    [DataField, AutoNetworkedField]
+    public ErpStatus ErpStatus { get; set; } = ErpStatus.None;
+    // Egide edit - end
+
     public void SetProfile(HumanoidCharacterProfile profile)
     {
         Content = profile.FlavorText;
@@ -62,6 +68,7 @@ public sealed partial class DetailExaminableComponent : Component
         NsfwOOCContent = profile.NsfwOOCFlavorText;
         NsfwLinksContent = profile.NsfwLinksFlavorText;
         NsfwTagsContent = profile.NsfwTagsFlavorText;
+        ErpStatus = profile.ErpStatus; // Egide edit
     }
     // Orion-End
 }
