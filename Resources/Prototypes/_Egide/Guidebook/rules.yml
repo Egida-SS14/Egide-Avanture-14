@@ -45,7 +45,7 @@
 - type: guideEntry
   id: EgideRule1_1
   name: guide-entry-server-rules-rule-1-1
-  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule1.1.xml"
+  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule1_1.xml"
 
 - type: guideEntry
   id: EgideRule1_2
