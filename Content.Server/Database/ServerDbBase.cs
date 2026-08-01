@@ -138,6 +138,7 @@ using System.Threading.Tasks;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Shared._Orion.CustomGhost;
+using Content.Shared._Egide.Preferences; // Egide edit
 using Content.Shared.Administration.Logs;
 using Content.Shared.Construction.Prototypes;
 using Content.Shared.Database;
@@ -422,6 +423,7 @@ namespace Content.Server.Database
                 profile.NSFWLinksFlavorText,
                 profile.NSFWTagsFlavorText,
                 // Orion-End
+                (ErpStatus)profile.ErpStatus, // Egide edit
                 profile.Species,
                 profile.Height, // Goobstation: port EE height/width sliders
                 profile.Width, // Goobstation: port EE height/width sliders
@@ -474,6 +476,7 @@ namespace Content.Server.Database
             profile.NSFWOOCFlavorText = humanoid.NsfwOOCFlavorText;
             profile.NSFWTagsFlavorText = humanoid.NsfwTagsFlavorText;
             // Orion-End
+            profile.ErpStatus = (int)humanoid.ErpStatus; // Egide edit
             profile.Species = humanoid.Species;
             profile.Height = humanoid.Height; // Goobstation: port EE height/width sliders
             profile.Width = humanoid.Width; // Goobstation: port EE height/width sliders

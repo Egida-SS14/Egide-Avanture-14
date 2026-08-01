@@ -227,12 +227,6 @@
     path: /Audio/_Egide/Music/Mike Klubnika - Socket Calibration.ogg
 
 - type: jukebox
-  id: MikeKlubnikaGeneralRelease
-  name: Mike Klubnika - General Release
-  path:
-    path: /Audio/_Egide/Music/Mike Klubnika - General Release.ogg
-
-- type: jukebox
   id: MikeKlubnikaBlankShell
   name: Mike Klubnika - Blank Shell
   path:
