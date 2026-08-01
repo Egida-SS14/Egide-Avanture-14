@@ -674,6 +674,7 @@ namespace Content.Server.Database
         public string NSFWLinksFlavorText { get; set; } = null!;
         public string NSFWTagsFlavorText { get; set; } = null!;
         // Orion-End
+        public int ErpStatus { get; set; } = 0; // Egide edit
         public int Age { get; set; }
         public string Sex { get; set; } = null!;
         public string Gender { get; set; } = null!;
