@@ -50,17 +50,17 @@
 - type: guideEntry
   id: EgideRule1_2
   name: guide-entry-server-rules-rule-1-2
-  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule1.2.xml"
+  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule1_2.xml"
 
 - type: guideEntry
   id: EgideRule1_3
   name: guide-entry-server-rules-rule-1-3
-  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule1.3.xml"
+  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule1_3.xml"
 
 - type: guideEntry
   id: EgideRule1_4
   name: guide-entry-server-rules-rule-1-4
-  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule1.4.xml"
+  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule1_4.xml"
 
 - type: guideEntry
   id: EgideRule2
@@ -75,12 +75,12 @@
 - type: guideEntry
   id: EgideRule3_1
   name: guide-entry-server-rules-rule-3-1
-  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule3.1.xml"
+  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule3_1.xml"
 
 - type: guideEntry
   id: EgideRule3_2
   name: guide-entry-server-rules-rule-3-2
-  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule3.2.xml"
+  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule3_2.xml"
 
 - type: guideEntry
   id: EgideRule4
@@ -105,12 +105,12 @@
 - type: guideEntry
   id: EgideRule7_1
   name: guide-entry-server-rules-rule-7-1
-  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule7.1.xml"
+  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule7_1.xml"
 
 - type: guideEntry
   id: EgideRule7_2
   name: guide-entry-server-rules-rule-7-2
-  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule7.2.xml"
+  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule7_2.xml"
 
 - type: guideEntry
   id: EgideRule8
@@ -120,17 +120,17 @@
 - type: guideEntry
   id: EgideRule8_1
   name: guide-entry-server-rules-rule-8-1
-  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule8.1.xml"
+  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule8_1.xml"
 
 - type: guideEntry
   id: EgideRule8_2
   name: guide-entry-server-rules-rule-8-2
-  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule8.2.xml"
+  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule8_2.xml"
 
 - type: guideEntry
   id: EgideRule8_3
   name: guide-entry-server-rules-rule-8-3
-  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule8.3.xml"
+  text: "/ServerInfo/_Egide/Guidebook/ServerRules/Rule8_3.xml"
 
 - type: guideEntry
   id: EgideRule9
