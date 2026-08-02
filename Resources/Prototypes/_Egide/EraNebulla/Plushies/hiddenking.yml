@@ -1,0 +1,27 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieHiddenKing
+  name: плюшевый король
+  description: От неё веет запахом пепла и... Бас-гитары?
+  components:
+  - type: Sprite
+    sprite: _Egide/EraNebulla/Plushies/hiddenking.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    sprite: _Egide/EraNebulla/Plushies/hiddenking.rsi
+  - type: Extractable
+    grindableSolutionName: ash
+  - type: SolutionContainerManager
+    solutions:
+      ash:
+        reagents:
+        - ReagentId: Ash
+          Quantity: 10
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Ash
+          Quantity: 10
+        - ReagentId: Fiber
+          Quantity: 5
