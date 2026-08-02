@@ -351,3 +351,9 @@
   name: Chris Christodoulou - The Rain Formerly Known as Purple
   path:
     path: /Audio/_Egide/Music/Chris Christodoulou - The Rain Formerly Known as Purple.ogg
+
+- type: jukebox
+  id: DuranDuranINVISIBLE
+  name: Duran Duran - INVISIBLE
+  path:
+    path: /Audio/_Egide/Music/Duran-Duran-INVISIBLE.ogg
