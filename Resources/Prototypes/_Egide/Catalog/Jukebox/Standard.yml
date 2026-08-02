@@ -357,3 +357,21 @@
   name: Duran Duran - INVISIBLE
   path:
     path: /Audio/_Egide/Music/Duran-Duran-INVISIBLE.ogg
+
+- type: jukebox
+  id: IntoAsgard
+  name: Sam Houghton and Joe Collinson - Into Asgard
+  path:
+    path: /Audio/_Egide/Music/Sam Houghton and Joe Collinson - Into Asgard.ogg
+
+- type: jukebox
+  id: Bloodonthedancefloor
+  name: Chris Christodoulou - Blood on the Dancefloor
+  path:
+    path: /Audio/_Egide/Music/Blood on the Dancefloor.ogg
+
+- type: jukebox
+  id: UndeadManWalkin
+  name: Chris Christodoulou - Undead Man Walkin
+  path:
+    path: /Audio/_Egide/Music/Undead Man Walkin'.ogg
