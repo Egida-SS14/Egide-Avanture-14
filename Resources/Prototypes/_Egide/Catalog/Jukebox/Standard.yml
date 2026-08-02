@@ -345,3 +345,9 @@
   name: 90's or 20's cartoons - Kwik Flip _ YTPMV
   path:
     path: /Audio/_Egide/Music/90's or 20's cartoons - Kwik Flip _ YTPMV.ogg
+
+- type: jukebox
+  id: ChrisChristodoulouTheRainFormerlyKnownasPurple
+  name: Chris Christodoulou - The Rain Formerly Known as Purple
+  path:
+    path: /Audio/_Egide/Music/Chris Christodoulou - The Rain Formerly Known as Purple.ogg
