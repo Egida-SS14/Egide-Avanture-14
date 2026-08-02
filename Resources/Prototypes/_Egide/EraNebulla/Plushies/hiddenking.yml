@@ -2,7 +2,7 @@
   parent: BasePlushie
   id: PlushieHiddenKing
   name: плюшевый король
-  description: От неё веет запахом пепла и... Бас-гитары?
+  description: От него веет запахом пепла и... Бас-гитары?
   components:
   - type: Sprite
     sprite: _Egide/EraNebulla/Plushies/hiddenking.rsi
@@ -21,7 +21,5 @@
       food:
         maxVol: 10
         reagents:
-        - ReagentId: Ash
-          Quantity: 10
         - ReagentId: Fiber
-          Quantity: 5
+          Quantity: 15
