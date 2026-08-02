@@ -69,7 +69,10 @@ namespace Egide.Bot
             {
                 BotToken = mapping["bot_token"]?.ToString() ?? "",
                 GuildId = ulong.Parse(mapping["guild_id"]?.ToString() ?? "0"),
-                DebugMode = mapping["debug_mode"]?.ToString()?.ToLower() == "true"
+                DebugMode = mapping["debug_mode"]?.ToString()?.ToLower() == "true",
+                DatabaseEngine = mapping["database_engine"]?.ToString() ?? "sqlite",
+                DatabaseSqlitePath = mapping["database_sqlite_path"]?.ToString() ?? "preferences.db",
+                DatabasePgConnectionString = mapping["database_pg_connection_string"]?.ToString() ?? ""
             };
         }
 
@@ -84,7 +87,7 @@ namespace Egide.Bot
         private async Task ReadyAsync()
         {
             BotLoggerSystem.Log(LogType.INFO, "Инициализация...");
-            SqlSystem.InitDatabase("main", false);
+            SqlSystem.InitDatabase(_config);
 
             var guild = _client.GetGuild(_config.GuildId);
             if (guild != null)
