@@ -4,6 +4,15 @@ buildAllRelease
     Builds all projects with release configuration
 buildAllTools
     Builds all projects with tools configuration
+buildServerRelease
+    Builds the server (Content.Goobstation.Server) in release configuration without the bot
+buildServerBotRelease
+    Builds the server (Content.Goobstation.Server) and Egide.Bot in release configuration
+packAllLinuxBot
+    Packages the server for linux, publishes Egide.Bot into release/bot and adds it to the server zip
+    under bot/, plus the server-only config (server_config.toml)
+systemd/egide-bot.service
+    Example systemd unit for running Egide.Bot alongside SS14.Watchdog
 
 The debug vs release build is simply what people develop in vs the actual server.
 The release build contains various optimizations, while the debug build contains debugging tools.
@@ -16,6 +25,8 @@ runQuickClient
     Runs the client without building
 runQuickServer
     Runs the server without building
+runQuickServerBot
+    Runs the server and Egide.Bot without building
 
 runTests
     Runs the unit tests, makes sure various C# systems work as intended

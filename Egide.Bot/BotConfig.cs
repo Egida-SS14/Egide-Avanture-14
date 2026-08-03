@@ -9,7 +9,7 @@ namespace Egide.Bot
         public string DatabaseEngine { get; set; } = "sqlite";
 
         public string DatabaseSqlitePath { get; set; } = "preferences.db";
-        
+
         public string DatabasePgConnectionString { get; set; } = "";
     }
 }
