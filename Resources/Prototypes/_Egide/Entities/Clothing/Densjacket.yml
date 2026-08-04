@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: [ ClothingOuterStorageBase, AllowSuitStorageClothing ]
   id: ClothingOuterCoatDensJacket
   name: Den's jacket
   description: an old bomber jacket equipped with an engineer's life support system and additional temperature and radiation sensors. a strange decision.
@@ -8,6 +8,11 @@
     sprite: _Egide/Clothing/OuterClothing/Coats/Densjacket.rsi
   - type: Clothing
     sprite: _Egide/Clothing/OuterClothing/Coats/Densjacket.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-unshaded
+        shader: unshaded
   - type: Storage
     grid:
     - 0,0,2,2

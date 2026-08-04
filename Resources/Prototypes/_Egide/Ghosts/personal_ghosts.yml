@@ -15,3 +15,21 @@
   - type: Sprite
     sprite: _Egide/Ghosts/ckey/Goouise.rsi
     color: "#ffffffe6" # 0.9 alpha
+
+- type: customGhost
+  parent: CkeyPersonal
+  id: Mafiozy-ghost
+  restrictions:
+  - !type:CkeyRestriction
+    ckey: [ Mafiozy ]
+  entity: MobObserver-Mafiozy
+
+- type: entity
+  parent: MobObserver
+  id: MobObserver-Mafiozy
+  description: One makes you larger. Объелся пилюль.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Egide/Ghosts/ckey/Mafiozy.rsi
+    color: "#ffffffe6" # 0.9 alpha
