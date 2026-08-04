@@ -375,3 +375,93 @@
   name: Chris Christodoulou - Undead Man Walkin
   path:
     path: /Audio/_Egide/Music/Undead Man Walkin'.ogg
+
+- type: jukebox
+  id: PerilsEternal
+  name: SULFUR - Perils Eternal
+  path:
+    path: /Audio/_Egide/Music/SULFUR - Perils Eternal.ogg
+
+- type: jukebox
+  id: MOONDustMetalCover
+  name: MOON - Dust Metal Cover
+  path:
+    path: /Audio/_Egide/Music/MOON - Dust Metal Cover.ogg
+
+- type: jukebox
+  id: DriversHigh
+  name: L'Arc-en-Ciel - Drivers High
+  path:
+    path: /Audio/_Egide/Music/Drivers High.ogg
+
+- type: jukebox
+  id: ChrisChristodoulouReaperandBlues
+  name: Chris Christodoulou - Reaper (and) Blues
+  path:
+    path: /Audio/_Egide/Music/Chris Christodoulou - Reaper (and) Blues.ogg
+
+- type: jukebox
+  id: BalatroMainTheme
+  name: Balatro Main Theme
+  path:
+    path: /Audio/_Egide/Music/Balatro Main Theme.ogg
+
+- type: jukebox
+  id: DaftPunkDigitalLove
+  name: Daft Punk - Digital Love
+  path:
+    path: /Audio/_Egide/Music/Daft Punk - Digital Love.ogg
+
+- type: jukebox
+  id: LetItHappen
+  name: Tame Impala - Let It Happen
+  path:
+    path: /Audio/_Egide/Music/Let It Happen.ogg
+
+- type: jukebox
+  id: VeridisQuo
+  name: Daft Punk - Veridis Quo
+  path:
+    path: /Audio/_Egide/Music/Veridis Quo.ogg
+
+- type: jukebox
+  id: GorillazHumility
+  name: Gorillaz - Humility
+  path:
+    path: /Audio/_Egide/Music/Gorillaz - Humility.ogg
+
+- type: jukebox
+  id: Invader303DigitalizedDreams
+  name: Invader 303 - Digitalized Dreams
+  path:
+    path: /Audio/_Egide/Music/Invader 303 - Digitalized Dreams.ogg
+
+- type: jukebox
+  id: Invader303TheLongVoyage
+  name: Invader 303 - The Long Voyage
+  path:
+    path: /Audio/_Egide/Music/Invader 303 - The Long Voyage.ogg
+
+- type: jukebox
+  id: Nuclear
+  name: Mike Oldfield - Nuclear
+  path:
+    path: /Audio/_Egide/Music/Nuclear.ogg
+
+- type: jukebox
+  id: Trip Lee - Lay Down.ogg
+  name: Trip Lee - Lay Down (Safe & Sound)
+  path:
+    path: /Audio/_Egide/Music/Trip Lee - Lay Down.ogg
+
+- type: jukebox
+  id: DeltaruneGreenRoom
+  name: Deltarune - Green Room
+  path:
+    path: /Audio/_Egide/Music/Deltarune - Green Room.ogg
+
+- type: jukebox
+  id: TameImpalaDracula
+  name: Tame Impala - Dracula
+  path:
+    path: /Audio/_Egide/Music/Tame Impala - Dracula.ogg
