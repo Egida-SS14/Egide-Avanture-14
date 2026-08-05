@@ -6,6 +6,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using System.Linq; //Egide-edit
 using Content.Shared.Audio.Jukebox;
 using Robust.Client.Audio;
 using Robust.Client.UserInterface;
@@ -18,6 +19,11 @@ public sealed class JukeboxBoundUserInterface : BoundUserInterface
 {
     [Dependency] private readonly IPrototypeManager _protoManager = default!;
 
+    //Egide-start: cache prototypes
+    [ViewVariables]
+    private List<JukeboxPrototype>? _cachedPrototypes;
+    //Egide-end
+
     [ViewVariables]
     private JukeboxMenu? _menu;
 
@@ -26,7 +32,7 @@ public sealed class JukeboxBoundUserInterface : BoundUserInterface
         IoCManager.InjectDependencies(this);
     }
 
-    protected override void Open()
+        protected override void Open()
     {
         base.Open();
 
@@ -60,7 +66,14 @@ public sealed class JukeboxBoundUserInterface : BoundUserInterface
 
         _menu.SetTime += SetTime;
         _menu.SetVolume += SetVolume; // Orion
-        PopulateMusic();
+
+        //Egide-start: cache and populate
+        _cachedPrototypes ??= _protoManager.EnumeratePrototypes<JukeboxPrototype>()
+            .OrderBy(p => p.Name)
+            .ToList();
+        _menu.Populate(_cachedPrototypes);
+        //Egide-end
+
         Reload();
     }
 
@@ -87,10 +100,11 @@ public sealed class JukeboxBoundUserInterface : BoundUserInterface
         }
     }
 
-    public void PopulateMusic()
-    {
-        _menu?.Populate(_protoManager.EnumeratePrototypes<JukeboxPrototype>());
-    }
+    //public void PopulateMusic()
+    //{
+    //    _menu?.Populate(_protoManager.EnumeratePrototypes<JukeboxPrototype>());
+    //}
+    // Egide-edit
 
     public void SelectSong(ProtoId<JukeboxPrototype> songid)
     {

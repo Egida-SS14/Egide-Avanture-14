@@ -6,8 +6,13 @@ SPDX-License-Identifier: MIT
 -->
 
 <ui:FancyWindow xmlns="https://spacestation14.io" xmlns:ui="clr-namespace:Content.Client.UserInterface.Controls"
-                SetSize="600 500" Title="{Loc 'jukebox-menu-title'}"> <!-- Orion-Edit -->
+                SetSize="600 550" Title="{Loc 'jukebox-menu-title'}"> <!-- Orion-Edit -->
     <BoxContainer Margin="4 0" Orientation="Vertical">
+        <!-- Egide-start search bar -->
+        <LineEdit Name="SearchBar"
+                  PlaceHolder="{Loc 'jukebox-menu-search-placeholder'}"
+                  HorizontalExpand="True" />
+        <!-- Egide-end -->
         <ItemList Name="MusicList" SelectMode="Button" Margin="3 3 3 3"
         HorizontalExpand="True" VerticalExpand="True" SizeFlagsStretchRatio="8"/>
         <BoxContainer Orientation="Vertical">

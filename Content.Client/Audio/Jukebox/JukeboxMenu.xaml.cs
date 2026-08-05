@@ -28,6 +28,11 @@ public sealed partial class JukeboxMenu : FancyWindow
     /// </summary>
     private bool _playState;
 
+    //Egide-start: cache for search/filter
+    private List<JukeboxPrototype> _allSongs = new();
+    private List<JukeboxPrototype> _filteredSongs = new();
+    //Egide-end
+
     /// <summary>
     /// True if playing, false if paused.
     /// </summary>
@@ -49,6 +54,10 @@ public sealed partial class JukeboxMenu : FancyWindow
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
         _audioSystem = _entManager.System<AudioSystem>();
+
+                //Egide-start: search
+        SearchBar.OnTextChanged += OnSearchTextChanged;
+        //Egide-end
 
         MusicList.OnItemSelected += args =>
         {
@@ -101,6 +110,26 @@ public sealed partial class JukeboxMenu : FancyWindow
         _lockTimer = 0.5f;
     }
 
+
+        //Egide-start: search methods
+    private void OnSearchTextChanged(LineEdit.LineEditEventArgs args)
+    {
+        var query = args.Text.Trim().ToLowerInvariant();
+        FilterSongs(query);
+    }
+
+    private void FilterSongs(string query)
+    {
+        _filteredSongs = string.IsNullOrWhiteSpace(query)
+            ? new List<JukeboxPrototype>(_allSongs)
+            : _allSongs.FindAll(s => s.Name.ToLowerInvariant().Contains(query)
+                                  || s.ID.ToLowerInvariant().Contains(query));
+
+        RepopulateList();
+    }
+
+    //Egide-end
+
     // Orion-Start
     private void VolumeSliderKeyUp(Slider args)
     {
@@ -112,16 +141,26 @@ public sealed partial class JukeboxMenu : FancyWindow
     /// <summary>
     /// Re-populates the list of jukebox prototypes available.
     /// </summary>
+
+    //Egide-start: populate with caching
     public void Populate(IEnumerable<JukeboxPrototype> jukeboxProtos)
     {
-        MusicList.Clear();
+        _allSongs = new List<JukeboxPrototype>(jukeboxProtos);
+        _allSongs.Sort((a, b) => string.Compare(a.Name, b.Name, StringComparison.InvariantCultureIgnoreCase));
+        _filteredSongs = new List<JukeboxPrototype>(_allSongs);
+        RepopulateList();
+    }
 
-        foreach (var entry in jukeboxProtos)
+    private void RepopulateList()
+    {
+        MusicList.Clear();
+        foreach (var entry in _filteredSongs)
         {
             MusicList.AddItem(entry.Name, metadata: entry.ID);
         }
         MusicList.SortItemsByText(); // Orion
     }
+    //Egide-end
 
     public void SetPlayPauseButton(bool playing, bool force = false)
     {
@@ -159,12 +198,24 @@ public sealed partial class JukeboxMenu : FancyWindow
     }
     // Orion-End
 
+    //Egide-start: highlight selected song
     public void SetSelectedSong(string name, float length)
     {
         SetSelectedSongText(name);
+
+        for (int i = 0; i < _filteredSongs.Count; i++)
+        {
+            if (_filteredSongs[i].Name == name)
+            {
+                MusicList[i].Selected = true;
+                break;
+            }
+        }
+
         PlaybackSlider.MaxValue = length;
         PlaybackSlider.SetValueWithoutEvent(0);
     }
+    //Egide-end
 
     // Orion-Start
     public void SetVolumeSlider(float volume)

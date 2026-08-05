@@ -48,7 +48,7 @@ public sealed class JukeboxSystem : SharedJukeboxSystem
             if (!_uiSystem.TryGetOpenUi<JukeboxBoundUserInterface>((uid, ui), JukeboxUiKey.Key, out var bui))
                 continue;
 
-            bui.PopulateMusic();
+            //bui.PopulateMusic(); //Egide: removed, now populated in Open()
         }
     }
 
