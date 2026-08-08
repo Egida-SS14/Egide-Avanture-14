@@ -36,5 +36,5 @@ runTestsYAML
     Runs the YAML linter and finds issues with the YAML files that you probably wouldn't otherwise
 
 ------!!!------
-DO NOT USE PackAllLinux!!!
+DO NOT USE packAllLinux.DNU!!!
 ------!!!------
