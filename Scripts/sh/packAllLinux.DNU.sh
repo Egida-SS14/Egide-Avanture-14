@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-if [ "$(dirname $0)" != "." ]; then
-    cd "$(dirname $0)"
-fi
-
-cd ../../
+cd ..
+cd ..
 
 git submodule update --init --recursive
 

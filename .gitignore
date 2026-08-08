@@ -312,3 +312,6 @@ config.json
 
 # IDE
 qodana.yaml
+
+# Egide-bot config
+Egide.Bot/config.yml

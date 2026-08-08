@@ -1,14 +1,12 @@
-#!/usr/bin/env bash
-set -e
+#!/usr/bin/env sh
+# make sure to start from script dir
 
 if [ "$(dirname $0)" != "." ]; then
     cd "$(dirname $0)"
 fi
 
-cd ../../
+cd ../../../
 
 git submodule update --init --recursive
-
 dotnet build -c Release
-
-dotnet run --project Content.Packaging server --hybrid-acz --platform linux
+dotnet build Egide.Bot -c Release
