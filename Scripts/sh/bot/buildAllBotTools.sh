@@ -1,12 +1,11 @@
 #!/usr/bin/env sh
-
 # make sure to start from script dir
 if [ "$(dirname $0)" != "." ]; then
     cd "$(dirname $0)"
 fi
 
-cd ../../
+cd ../../../
 
 git submodule update --init --recursive
-dotnet build Content.Goobstation.Server -c Release
-dotnet build Egide.Bot -c Release
+dotnet build -c Tools
+dotnet build Egide.Bot -c Tools

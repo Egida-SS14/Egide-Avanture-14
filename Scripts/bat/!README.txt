@@ -6,8 +6,6 @@ buildAllTools
     Builds all projects with tools configuration
 buildServerRelease
     Builds the server (Content.Goobstation.Server) in release configuration without the bot
-buildServerBotRelease
-    Builds the server (Content.Goobstation.Server) and Egide.Bot in release configuration
 PackAllWinBot
     Packages the server for win-x64, publishes Egide.Bot into release\bot and adds it to the server zip
     under bot\, plus the server-only config (server_config.toml)
@@ -23,8 +21,6 @@ runQuickClient
     Runs the client without building
 runQuickServer
     Runs the server without building
-runQuickServerBot
-    Runs the server and Egide.Bot without building
 
 runTests
     Runs the unit tests, makes sure various C# systems work as intended
@@ -32,3 +28,9 @@ runTestsIntegration
     Runs the integration tests, makes sure various C# systems work as intended
 runTestsYAML
     Runs the YAML linter and finds issues with the YAML files that you probably wouldn't otherwise
+
+Scripts for building the assembly with a bot are located in the bot/ directory
+
+------!!!------
+DO NOT USE PackAllWin!!!
+------!!!------

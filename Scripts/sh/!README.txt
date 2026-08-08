@@ -34,3 +34,7 @@ runTestsIntegration
     Runs the integration tests, makes sure various C# systems work as intended
 runTestsYAML
     Runs the YAML linter and finds issues with the YAML files that you probably wouldn't otherwise
+
+------!!!------
+DO NOT USE PackAllLinux!!!
+------!!!------
