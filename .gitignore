@@ -314,4 +314,4 @@ config.json
 qodana.yaml
 
 # Egide-bot config
-Egide.Bot\config.yml
+Egide.Bot/config.yml
