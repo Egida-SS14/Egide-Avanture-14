@@ -18,6 +18,11 @@ namespace Egide.Bot
         private const ulong SponsorT2RoleId = 1463938183581532201;
         private const ulong AuthorizedRoleId = 1366301442067140628;
         private const ulong AgeVerifiedRoleId = 1533145284316627095;
+#if DEBUG
+        private const bool IsDebugBuild = true;
+#else
+        private const bool IsDebugBuild = false;
+#endif
 
         private DiscordSocketClient _client = null!;
         private InteractionService _interactions = null!;
@@ -34,7 +39,7 @@ namespace Egide.Bot
         public async Task RunAsync()
         {
             _config = LoadConfig();
-            BotLoggerSystem.SetDebugMode(_config.DebugMode);
+            BotLoggerSystem.SetDebugMode(IsDebugBuild);
 
             var socketConfig = new DiscordSocketConfig
             {
@@ -59,7 +64,7 @@ namespace Egide.Bot
 
         private BotConfig LoadConfig()
         {
-            var content = File.ReadAllText("config.yml");
+            var content = File.ReadAllText(FindConfigFile());
             var stream = new StringReader(content);
             var yaml = new YamlStream();
             yaml.Load(stream);
@@ -69,11 +74,21 @@ namespace Egide.Bot
             {
                 BotToken = mapping["bot_token"]?.ToString() ?? "",
                 GuildId = ulong.Parse(mapping["guild_id"]?.ToString() ?? "0"),
-                DebugMode = mapping["debug_mode"]?.ToString()?.ToLower() == "true",
                 DatabaseEngine = mapping["database_engine"]?.ToString() ?? "sqlite",
                 DatabaseSqlitePath = mapping["database_sqlite_path"]?.ToString() ?? "preferences.db",
                 DatabasePgConnectionString = mapping["database_pg_connection_string"]?.ToString() ?? ""
             };
+        }
+
+        private static string FindConfigFile()
+        {
+            foreach (var dir in new[] { Directory.GetCurrentDirectory(), AppContext.BaseDirectory })
+            {
+                var path = Path.Combine(dir, "config.yml");
+                if (File.Exists(path))
+                    return path;
+            }
+            return "config.yml";
         }
 
         private Task LogAsync(LogMessage log)

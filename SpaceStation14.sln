@@ -529,8 +529,8 @@ Global
 		{A15A107B-2E1C-463D-A1D4-414E505799EB}.DebugOpt|Any CPU.Build.0 = Debug|Any CPU
 		{A15A107B-2E1C-463D-A1D4-414E505799EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A15A107B-2E1C-463D-A1D4-414E505799EB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A15A107B-2E1C-463D-A1D4-414E505799EB}.Tools|Any CPU.ActiveCfg = Debug|Any CPU
-		{A15A107B-2E1C-463D-A1D4-414E505799EB}.Tools|Any CPU.Build.0 = Debug|Any CPU
+		{A15A107B-2E1C-463D-A1D4-414E505799EB}.Tools|Any CPU.ActiveCfg = Tools|Any CPU
+		{A15A107B-2E1C-463D-A1D4-414E505799EB}.Tools|Any CPU.Build.0 = Tools|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

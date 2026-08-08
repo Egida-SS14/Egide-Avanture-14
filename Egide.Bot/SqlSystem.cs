@@ -20,7 +20,7 @@ namespace Egide.Bot
             _engine = config.DatabaseEngine;
             _connectionString = _engine == "postgres"
                 ? config.DatabasePgConnectionString
-                : $"Data Source={config.DatabaseSqlitePath}";
+                : $"Data Source={ResolveSqlitePath(config.DatabaseSqlitePath)};Default Timeout=30";
 
             BotLoggerSystem.Log(LogType.INFO, "Начало инициализации базы данных...");
             if (_engine != "postgres")
@@ -47,6 +47,40 @@ namespace Egide.Bot
                 : new SqliteConnection(_connectionString);
             conn.Open();
             return conn;
+        }
+
+        /// <summary>
+        /// Разрешает относительный путь к БД независимо от рабочей папки запуска:
+        /// сначала относительно cwd и папки exe, затем подъёмом по директориям к корню репозитория.
+        /// </summary>
+        private static string ResolveSqlitePath(string configured)
+        {
+            if (Path.IsPathRooted(configured))
+                return configured;
+
+            var direct = new[]
+            {
+                Path.GetFullPath(configured),
+                Path.Combine(AppContext.BaseDirectory, configured)
+            };
+            foreach (var candidate in direct)
+            {
+                var dir = Path.GetDirectoryName(candidate);
+                if (dir != null && Directory.Exists(dir))
+                    return candidate;
+            }
+
+            var current = new DirectoryInfo(AppContext.BaseDirectory);
+            while (current != null)
+            {
+                var candidate = Path.Combine(current.FullName, configured);
+                var dir = Path.GetDirectoryName(candidate);
+                if (dir != null && Directory.Exists(dir))
+                    return candidate;
+                current = current.Parent;
+            }
+
+            return direct[0];
         }
 
         private static DbCommand Command(DbConnection conn, string sql)

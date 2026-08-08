@@ -1,9 +1,10 @@
 # Настройки бота
 bot_token: ""
 guild_id: 1366117912313725001
-debug_mode: true
 
 # База данных
 database_engine: sqlite
-database_sqlite_path:
+# Путь к основной базе данных игры (bin/Content.Server/data/preferences.db), относительно корня репозитория.
+# Бот сам ищет его подъёмом по директориям, поэтому путь не зависит от папки запуска.
+database_sqlite_path: bin/Content.Server/data/preferences.db
 database_pg_connection_string: ""

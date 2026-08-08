@@ -1,6 +1,6 @@
 
 @echo off
-cd ../../
+cd ../../../
 
 call dotnet run --project Content.Packaging server --hybrid-acz --platform win-x64
 call dotnet publish Egide.Bot -c Release -o release\bot
