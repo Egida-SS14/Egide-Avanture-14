@@ -1,51 +1,49 @@
 #!/usr/bin/env bash
 # ═══════════════════════════════════════════════════════════════
 # SS14 Server + Egide.Bot Wrapper
-# Сервер — якорь. Бот перезапускается сам, сервер не трогаем.
+# Сервер — якорь. Бот в отдельной папке инстанса.
 # ═══════════════════════════════════════════════════════════════
 
-# set -e УБРАН — иначе падение фонового бота прервёт скрипт
+# --- Пути ---
+WRAPPER_DIR="$(cd "$(dirname "$0")" && pwd)"   # instances/egide/
+BOT_DIR="${WRAPPER_DIR}/bot"                    # instances/egide/bot/
+BOT_BINARY="${BOT_DIR}/Egide.Bot"
+BOT_CONFIG="${BOT_DIR}/config.yml"
 
-# --- Переход в корень репозитория (твоя логика) ---
-if [ "$(dirname "$0")" != "." ]; then
-    cd "$(dirname "$0")" || exit 1
-fi
-cd ../../ || exit 1
+# Путь до исходников репозитория (настрой под себя!)
+# Вариант 1: исходники рядом с instances/
+# REPO_ROOT="${WRAPPER_DIR}/../../"
+# Вариант 2: абсолютный путь
+REPO_ROOT="/opt/ss14/Egide-Avanture-14"
 
-# --- Конфигурация ---
-BOT_PROJECT="Egide.Bot"
-BOT_PUBLISH_DIR="${BOT_PROJECT}/bin/Release/net8.0/linux-x64/publish"
-BOT_CONFIG_SOURCE="${BOT_PROJECT}/config.yml"
-BOT_CONFIG_DEST="${BOT_PUBLISH_DIR}/config.yml"
+BOT_PROJECT="${REPO_ROOT}/Egide.Bot"
+BOT_PUBLISH_SRC="${BOT_PROJECT}/bin/Release/net8.0/linux-x64/publish/Egide.Bot"
+
 BOT_RESTART_DELAY=5
-
 SHUTDOWN=0
 BOT_PID=""
 SERVER_PID=""
 BOT_LOOP_PID=""
 
 # ═══════════════════════════════════════════════════════════════
-# Graceful shutdown: ловим SIGTERM/SIGINT от Watchdog/systemd
+# Graceful shutdown
 # ═══════════════════════════════════════════════════════════════
 cleanup() {
     local sig=$1
     echo "[Wrapper] Получен сигнал ${sig}. Останавливаем процессы..."
     SHUTDOWN=1
 
-    # 1. Останавливаем цикл перезапуска бота
     if [ -n "$BOT_LOOP_PID" ] && kill -0 "$BOT_LOOP_PID" 2>/dev/null; then
         kill "$BOT_LOOP_PID" 2>/dev/null
         wait "$BOT_LOOP_PID" 2>/dev/null
     fi
 
-    # 2. Убиваем текущего бота
     if [ -n "$BOT_PID" ] && kill -0 "$BOT_PID" 2>/dev/null; then
         echo "[Wrapper] Останавливаем бота (PID: $BOT_PID)..."
         kill -TERM "$BOT_PID" 2>/dev/null
         wait "$BOT_PID" 2>/dev/null
     fi
 
-    # 3. Убиваем сервер (Watchdog ждёт завершения wrapper'а)
     if [ -n "$SERVER_PID" ] && kill -0 "$SERVER_PID" 2>/dev/null; then
         echo "[Wrapper] Останавливаем сервер (PID: $SERVER_PID)..."
         kill -TERM "$SERVER_PID" 2>/dev/null
@@ -60,96 +58,109 @@ trap 'cleanup SIGTERM' SIGTERM
 trap 'cleanup SIGINT' SIGINT
 
 # ═══════════════════════════════════════════════════════════════
-# Шаг 1: Сборка (твоя оригинальная логика)
+# Шаг 1: Сборка сервера и бота
 # ═══════════════════════════════════════════════════════════════
+cd "$REPO_ROOT" || exit 1
+
 echo "[Wrapper] Обновление субмодулей..."
 git submodule update --init --recursive
 
 echo "[Wrapper] Сборка сервера..."
 dotnet build -c Release
 
-# ═══════════════════════════════════════════════════════════════
-# Шаг 2: Сборка и подготовка бота
-# ═══════════════════════════════════════════════════════════════
 echo "[Wrapper] Публикация Egide.Bot..."
 dotnet publish "${BOT_PROJECT}" -c Release -r linux-x64 --self-contained
 
-# Копируем config.yml, если есть
-if [ -f "$BOT_CONFIG_SOURCE" ] && [ ! -f "$BOT_CONFIG_DEST" ]; then
-    cp "$BOT_CONFIG_SOURCE" "$BOT_CONFIG_DEST"
-    echo "[Wrapper] Скопирован config.yml → ${BOT_PUBLISH_DIR}"
+# ═══════════════════════════════════════════════════════════════
+# Шаг 2: Копируем бота в instances/egide/bot/ (вне bin/!)
+# ═══════════════════════════════════════════════════════════════
+mkdir -p "$BOT_DIR"
+
+# Копируем бинарник
+if [ -f "$BOT_PUBLISH_SRC" ]; then
+    cp "$BOT_PUBLISH_SRC" "$BOT_BINARY"
+    chmod +x "$BOT_BINARY"
+    echo "[Wrapper] Бинарник скопирован → ${BOT_DIR}"
+else
+    echo "[Wrapper] ОШИБКА: Не найден ${BOT_PUBLISH_SRC}"
+    exit 1
 fi
 
-if [ ! -f "$BOT_CONFIG_DEST" ]; then
-    echo "[Wrapper] ВНИМАНИЕ: config.yml не найден! Создай ${BOT_CONFIG_SOURCE}"
+# Копируем config.yml из исходников, если в bot/ его ещё нет
+# (чтобы не перезаписать существующий конфиг при обновлении!)
+BOT_CONFIG_SRC="${BOT_PROJECT}/config.yml"
+if [ -f "$BOT_CONFIG_SRC" ] && [ ! -f "$BOT_CONFIG" ]; then
+    cp "$BOT_CONFIG_SRC" "$BOT_CONFIG"
+    echo "[Wrapper] Конфиг скопирован → ${BOT_CONFIG}"
+fi
+
+# Проверяем, что конфиг на месте
+if [ ! -f "$BOT_CONFIG" ]; then
+    echo "[Wrapper] ВНИМАНИЕ: ${BOT_CONFIG} не найден!"
+    echo "[Wrapper] Создай файл со следующим содержимым:"
+    echo "  bot_token: \"YOUR_DISCORD_BOT_TOKEN\""
+    echo "  guild_id: 1234567890123456789"
+    echo "  database_engine: sqlite"
+    echo "  database_sqlite_path: bot.db"
 fi
 
 # ═══════════════════════════════════════════════════════════════
-# Шаг 3: Фоновый цикл бота (авто-перезапуск, независим от сервера)
+# Шаг 3: Цикл бота (авто-перезапуск, независим от сервера)
 # ═══════════════════════════════════════════════════════════════
 bot_loop() {
     while [ $SHUTDOWN -eq 0 ]; do
-        echo "[Wrapper] Запуск Egide.Bot..."
+        echo "[Wrapper] Запуск Egide.Bot из ${BOT_DIR}..."
         
-        # Запускаем бота в его рабочей директории
-        (cd "$BOT_PUBLISH_DIR" && ./Egide.Bot) &
+        # Рабочая директория бота — BOT_DIR, чтобы он нашёл config.yml
+        (cd "$BOT_DIR" && ./Egide.Bot) &
         BOT_PID=$!
         
-        # Ждём завершения процесса бота
         wait $BOT_PID
         BOT_EXIT=$?
         
-        # Если wrapper в режиме shutdown — выходим из цикла
         if [ $SHUTDOWN -ne 0 ]; then
             echo "[Wrapper] Бот остановлен (код: $BOT_EXIT), shutdown mode."
             break
         fi
         
-        # Бот упал — перезапускаем, сервер НЕ трогаем
         echo "[Wrapper] Egide.Bot упал (код: $BOT_EXIT). Перезапуск через ${BOT_RESTART_DELAY}с..."
         sleep "$BOT_RESTART_DELAY"
     done
 }
 
-# Запускаем цикл бота в фоне
 bot_loop &
 BOT_LOOP_PID=$!
 
-# Даём боту время стартануть
 sleep 2
 if [ -n "$BOT_PID" ] && kill -0 "$BOT_PID" 2>/dev/null; then
     echo "[Wrapper] Egide.Bot активен (PID: $BOT_PID)"
 else
-    echo "[Wrapper] ПРЕДУПРЕЖДЕНИЕ: Бот не запустился. Проверь config.yml."
-    # Сервер всё равно запустится — бот не якорь
+    echo "[Wrapper] ПРЕДУПРЕЖДЕНИЕ: Бот не запустился. Проверь ${BOT_CONFIG}."
 fi
 
 # ═══════════════════════════════════════════════════════════════
-# Шаг 4: Запуск сервера (ЯКОРЬ — скрипт ждёт его завершения)
+# Шаг 4: Запуск сервера (якорь)
 # ═══════════════════════════════════════════════════════════════
 echo "[Wrapper] Запуск сервера (якорь)..."
 
 dotnet run --project Content.Packaging server --hybrid-acz --platform linux &
 SERVER_PID=$!
 
-# Ждём завершения СЕРВЕРА. Это ключевая строка — Watchdog следит за этим wait.
 wait $SERVER_PID
 SERVER_EXIT=$?
 
 echo "[Wrapper] Сервер завершился (код: $SERVER_EXIT). Останавливаем бота..."
 
 # ═══════════════════════════════════════════════════════════════
-# Шаг 5: Сервер умер — останавливаем бота и завершаем wrapper
+# Шаг 5: Сервер умер — останавливаем бота
 # ═══════════════════════════════════════════════════════════════
 SHUTDOWN=1
 
-# Останавливаем цикл перезапуска
 if [ -n "$BOT_LOOP_PID" ] && kill -0 "$BOT_LOOP_PID" 2>/dev/null; then
     kill "$BOT_LOOP_PID" 2>/dev/null
     wait "$BOT_LOOP_PID" 2>/dev/null
 fi
 
-# Убиваем текущего бота
 if [ -n "$BOT_PID" ] && kill -0 "$BOT_PID" 2>/dev/null; then
     kill -TERM "$BOT_PID" 2>/dev/null
     wait "$BOT_PID" 2>/dev/null
