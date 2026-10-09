@@ -1,0 +1,63 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: job
+  id: EgideCentcommOperator
+  name: egide-job-name-centcomm-operator
+  description: egide-job-description-centcomm-operator
+  playTimeTracker: JobEgideCentcommOperator
+  startingGear: EgideCentcommOperatorGear
+  icon: JobIconCaptain
+  weight: 10
+  supervisors: egide-job-supervisors-centcomm-chief
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+
+- type: playTimeTracker
+  id: JobEgideCentcommOperator
+
+- type: startingGear
+  id: EgideCentcommOperatorGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficial
+    shoes: ClothingShoesBootsLaceup
+    head: ClothingHeadHatCentcomcap
+    eyes: ClothingEyesGlassesCommand
+    gloves: ClothingHandsGlovesColorBlack
+    back: ClothingBackpackSatchelLeather
+    id: EgideCentcommOperatorPDA
+    ears: ClothingHeadsetAltCentCom
+    pocket1: BoxFolderCentCom
+
+- type: job
+  id: EgideCentcommChiefOfStaff
+  name: egide-job-name-centcomm-chief-of-staff
+  description: egide-job-description-centcomm-chief-of-staff
+  playTimeTracker: JobEgideCentcommChiefOfStaff
+  startingGear: EgideCentcommChiefOfStaffGear
+  icon: JobIconCaptain
+  weight: 20
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+
+- type: playTimeTracker
+  id: JobEgideCentcommChiefOfStaff
+
+- type: startingGear
+  id: EgideCentcommChiefOfStaffGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficial
+    shoes: ClothingShoesBootsLaceup
+    head: ClothingHeadHatCentcomcap
+    eyes: ClothingEyesGlassesCommand
+    gloves: ClothingHandsGlovesColorBlack
+    back: ClothingBackpackSatchelLeather
+    id: EgideCentcommChiefOfStaffPDA
+    ears: ClothingHeadsetAltCentCom
+    pocket1: BoxFolderCentCom

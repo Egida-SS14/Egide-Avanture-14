@@ -96,6 +96,7 @@ using JetBrains.Annotations;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
+using Robust.Shared.Serialization.Markdown.Mapping; // Egide
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -166,6 +167,22 @@ public sealed partial class StationJobsSystem : EntitySystem
     }
 
     #region Public API
+
+    /// <summary>
+    /// Builds a station jobs component for use as a station spawn override.
+    /// </summary>
+    /// <remarks>
+    /// Station prototypes keep <see cref="StationJobsComponent.SetupAvailableJobs"/> empty and receive their jobs
+    /// from the spawning station's config. Stations spawned in code need this to do the same.
+    /// </remarks>
+    public static EntityPrototype.ComponentRegistryEntry MakeAvailableJobsOverride(
+        IComponentFactory compFactory,
+        Dictionary<ProtoId<JobPrototype>, int[]> availableJobs)
+    {
+        return new EntityPrototype.ComponentRegistryEntry(
+            new StationJobsComponent {SetupAvailableJobs = availableJobs},
+            new MappingDataNode());
+    }
 
     /// <inheritdoc cref="TryAssignJob(Robust.Shared.GameObjects.EntityUid,string,NetUserId,Content.Server.Station.Components.StationJobsComponent?)"/>
     /// <param name="station">Station to assign a job on.</param>

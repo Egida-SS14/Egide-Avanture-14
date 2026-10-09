@@ -65,7 +65,8 @@ public sealed class EvacShuttleTest
 
         Assert.That(entMan.Count<StationCentcommComponent>(), Is.EqualTo(1));
         Assert.That(entMan.Count<StationEmergencyShuttleComponent>(), Is.EqualTo(1));
-        Assert.That(entMan.Count<StationDataComponent>(), Is.EqualTo(1));
+        // Egide: the CentComm grid is spawned as its own station, so there is one more station than upstream expects.
+        Assert.That(entMan.Count<StationDataComponent>(), Is.EqualTo(2));
         Assert.That(entMan.Count<EmergencyShuttleComponent>(), Is.EqualTo(1));
         Assert.That(entMan.Count<FTLMapComponent>(), Is.EqualTo(0));
 

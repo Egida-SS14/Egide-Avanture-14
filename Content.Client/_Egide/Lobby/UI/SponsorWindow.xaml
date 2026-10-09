@@ -1,0 +1,41 @@
+<!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      Title="{Loc 'egide-sponsor-title'}"
+                      SetSize="760 350" MinSize="520 300">
+    <BoxContainer Orientation="Vertical" SeparationOverride="12" Margin="12">
+        <RichTextLabel Text="{Loc 'egide-sponsor-intro'}" />
+        <ScrollContainer HorizontalExpand="True" VerticalExpand="True">
+            <BoxContainer Orientation="Horizontal" SeparationOverride="12" HorizontalExpand="True" VerticalExpand="True">
+                <PanelContainer StyleClasses="AngleRect" MinWidth="220" HorizontalExpand="True" VerticalExpand="True">
+                    <BoxContainer Orientation="Vertical" SeparationOverride="12" Margin="12" HorizontalExpand="True" VerticalExpand="True">
+                        <Label Text="{Loc 'egide-sponsor-syndicate'}" StyleClasses="LabelHeadingBigger" FontColorOverride="#E57373" HorizontalAlignment="Center" />
+                        <controls:HLine />
+                        <RichTextLabel Text="{Loc 'egide-sponsor-syndicate-benefits'}" HorizontalExpand="True" />
+                        <Control VerticalExpand="True" />
+                        <Button Name="SyndicateBuyButton" Text="{Loc 'egide-sponsor-buy'}" HorizontalExpand="True" MinHeight="36" />
+                    </BoxContainer>
+                </PanelContainer>
+                <PanelContainer StyleClasses="AngleRect" MinWidth="220" HorizontalExpand="True" VerticalExpand="True">
+                    <BoxContainer Orientation="Vertical" SeparationOverride="12" Margin="12" HorizontalExpand="True" VerticalExpand="True">
+                        <Label Text="{Loc 'egide-sponsor-shabolovka'}" StyleClasses="LabelHeadingBigger" FontColorOverride="#81C7E8" HorizontalAlignment="Center" />
+                        <controls:HLine />
+                        <RichTextLabel Text="{Loc 'egide-sponsor-shabolovka-benefits'}" HorizontalExpand="True" />
+                        <Control VerticalExpand="True" />
+                        <Button Name="ShabolovkaBuyButton" Text="{Loc 'egide-sponsor-buy'}" HorizontalExpand="True" MinHeight="36" />
+                    </BoxContainer>
+                </PanelContainer>
+                <PanelContainer StyleClasses="AngleRect" MinWidth="220" HorizontalExpand="True" VerticalExpand="True">
+                    <BoxContainer Orientation="Vertical" SeparationOverride="12" Margin="12" HorizontalExpand="True" VerticalExpand="True">
+                        <Label Text="{Loc 'egide-sponsor-legend'}" StyleClasses="LabelHeadingBigger" FontColorOverride="#E8CB81" HorizontalAlignment="Center" />
+                        <controls:HLine />
+                        <RichTextLabel Text="{Loc 'egide-sponsor-legend-benefits'}" HorizontalExpand="True" />
+                        <Control VerticalExpand="True" />
+                        <Button Name="LegendBuyButton" Text="{Loc 'egide-sponsor-buy'}" HorizontalExpand="True" MinHeight="36" />
+                    </BoxContainer>
+                </PanelContainer>
+            </BoxContainer>
+        </ScrollContainer>
+        <RichTextLabel Text="{Loc 'egide-sponsor-discord-note'}" />
+    </BoxContainer>
+</controls:FancyWindow>

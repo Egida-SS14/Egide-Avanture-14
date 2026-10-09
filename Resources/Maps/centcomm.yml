@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 04/29/2026 14:38:20
-  entityCount: 6894
+  entityCount: 6897
 maps: []
 grids:
 - 1668
@@ -43010,5 +43010,26 @@ entities:
     components:
     - type: Transform
       pos: 3.6049986,-26.507612
+      parent: 1668
+- proto: SpawnPointEgideCentcommOperator
+  entities:
+  - uid: 6992
+    components:
+    - type: Transform
+      pos: -18.5,11.5
+      parent: 1668
+- proto: SpawnPointEgideCentcommChiefOfStaff
+  entities:
+  - uid: 6993
+    components:
+    - type: Transform
+      pos: -15.5,10.5
+      parent: 1668
+- proto: SpawnPointLatejoin
+  entities:
+  - uid: 6994
+    components:
+    - type: Transform
+      pos: -18.5,11.5
       parent: 1668
 ...

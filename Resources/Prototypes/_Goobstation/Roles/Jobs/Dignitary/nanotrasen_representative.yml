@@ -95,6 +95,7 @@
 
 - type: job
   id: NanotrasenRepresentative
+  setPreference: false # Egide: retired station job; keep prototype for map compatibility.
   name: job-name-ntr
   description: job-description-ntr
   playTimeTracker: JobNanotrasenRepresentative

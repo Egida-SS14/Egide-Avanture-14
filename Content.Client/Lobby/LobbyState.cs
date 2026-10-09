@@ -123,6 +123,7 @@ namespace Content.Client.Lobby
         private ISawmill _sawmill = default!; // Goobstation
         private ClientGameTicker _gameTicker = default!;
         private ContentAudioSystem _contentAudioSystem = default!;
+        private LateJoinGui? _lateJoinWindow; // Egide
         private ReadyManifestSystem _readyManifest = default!; // Orion
 
         protected override Type? LinkedScreenType { get; } = typeof(LobbyGui);
@@ -165,6 +166,7 @@ namespace Content.Client.Lobby
             Lobby.ManifestButton.OnPressed += OnManifestPressed; // Orion
             Lobby.CharacterPreview.PatronPerks.OnPressed += OnPatronPerksPressed;
             Lobby.ReadyButton.OnPressed += OnReadyPressed;
+            Lobby.JoinCentcommButton.OnPressed += OnJoinCentcommPressed; // Egide
             Lobby.ReadyButton.OnToggled += OnReadyToggled;
 
             _gameTicker.InfoBlobUpdated += UpdateLobbyUi;
@@ -190,8 +192,12 @@ namespace Content.Client.Lobby
             Lobby!.ManifestButton.OnPressed -= OnManifestPressed; // Orion
             Lobby.CharacterPreview.PatronPerks.OnPressed -= OnPatronPerksPressed;
             Lobby!.ReadyButton.OnPressed -= OnReadyPressed;
+            Lobby.JoinCentcommButton.OnPressed -= OnJoinCentcommPressed; // Egide
             Lobby!.ReadyButton.OnToggled -= OnReadyToggled;
 
+            _lateJoinWindow?.Close(); // Egide
+            _lateJoinWindow?.Dispose();
+            _lateJoinWindow = null;
             Lobby = null;
         }
 
@@ -219,7 +225,24 @@ namespace Content.Client.Lobby
                 return;
             }
 
-            new LateJoinGui().OpenCentered();
+            OpenLateJoinWindow(centralCommandOnly: false);
+        }
+
+        // Egide: the standard joingame command still checks available slots on the server.
+        private void OnJoinCentcommPressed(BaseButton.ButtonEventArgs args)
+        {
+            if (!_gameTicker.IsGameStarted || _gameTicker.DisallowedLateJoin)
+                return;
+
+            OpenLateJoinWindow(centralCommandOnly: true);
+        }
+
+        private void OpenLateJoinWindow(bool centralCommandOnly)
+        {
+            _lateJoinWindow?.Close();
+            _lateJoinWindow?.Dispose();
+            _lateJoinWindow = new LateJoinGui(centralCommandOnly);
+            _lateJoinWindow.OpenCentered();
         }
 
         private void OnReadyToggled(BaseButton.ButtonToggledEventArgs args)
@@ -288,15 +311,18 @@ namespace Content.Client.Lobby
         private void LobbyLateJoinStatusUpdated()
         {
             Lobby!.ReadyButton.Disabled = _gameTicker.DisallowedLateJoin;
+            Lobby.JoinCentcommButton.Disabled = !_gameTicker.IsGameStarted || _gameTicker.DisallowedLateJoin; // Egide
         }
 
         private void UpdateLobbyUi()
         {
             Lobby!.CharacterPreview.PatronPerks.Visible = _linkAccount.CanViewPatronPerks();
+            Lobby.JoinCentcommButton.Disabled = !_gameTicker.IsGameStarted || _gameTicker.DisallowedLateJoin; // Egide
 
             if (_gameTicker.IsGameStarted)
             {
-                Lobby!.ReadyButton.Text = Loc.GetString("lobby-state-ready-button-join-state");
+                Lobby!.ReadyButton.Text = Loc.GetString("egide-station-join-button");
+                Lobby!.ReadyButton.Disabled = _gameTicker.DisallowedLateJoin; // Egide
                 Lobby!.ReadyButton.ToggleMode = false;
                 Lobby!.ReadyButton.Pressed = false;
                 Lobby!.ObserveButton.Disabled = false;

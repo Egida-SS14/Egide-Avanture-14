@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: [ BaseStation, BaseStationJobsSpawning, BaseStationRecords ]
+  id: EgideStationCentralCommand
+  categories: [ HideSpawnMenu ]
+  name: Central Command

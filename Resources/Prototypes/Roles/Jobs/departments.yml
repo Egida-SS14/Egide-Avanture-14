@@ -154,6 +154,8 @@
   buttonStyle: ButtonColorCentralCommandDepartment
   # Orion-End
   roles:
+  - EgideCentcommOperator
+  - EgideCentcommChiefOfStaff
   - CentralCommandOfficial
   - CBURN
   - ERTLeader
@@ -165,7 +167,6 @@
   - DeathSquad
   - HecuOperative
   - BlueshieldOfficer # Goobstation - Start
-  - NanotrasenRepresentative
   - NanotrasenCareerTrainer
   - NavyOfficer
   - NavyCaptain

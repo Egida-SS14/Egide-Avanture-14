@@ -80,6 +80,7 @@ using Content.Server.RoundEnd;
 using Content.Server.Screens.Components;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
+using Content.Server.Station.Components; // Egide
 using Content.Server.Station.Events;
 using Content.Server.Station.Systems;
 using Content.Shared.Access.Systems;
@@ -91,6 +92,7 @@ using Content.Shared.GameTicking;
 using Content.Shared.Localizations;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Events;
+using Content.Shared.Station;
 using Content.Shared.Tag;
 using Content.Shared.Tiles;
 using Robust.Server.GameObjects;
@@ -99,6 +101,8 @@ using Robust.Shared.Configuration;
 using Robust.Shared.EntitySerialization.Systems;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Player;
+using Content.Shared.Roles; // Egide
+using Robust.Shared.GameObjects; // Egide
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
@@ -112,6 +116,7 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
      * Handles the escape shuttle + CentCom.
      */
 
+    [Dependency] private readonly IComponentFactory _compFactory = default!; // Egide
     [Dependency] private readonly IAdminLogManager _logger = default!;
     [Dependency] private readonly IAdminManager _admin = default!;
     [Dependency] private readonly IConfigurationManager _configManager = default!;
@@ -628,6 +633,25 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
         component.MapEntity = map;
         _metaData.SetEntityName(map, Loc.GetString("map-name-centcomm"));
         component.Entity = grid;
+        // Egide-Start: the loaded CentComm grid is a separate playable station.
+        // Jobs are passed as spawn overrides, matching how map station configs set them.
+        _station.InitializeNewStation(new StationConfig
+        {
+            StationPrototype = "EgideStationCentralCommand",
+            StationComponentOverrides = new ComponentRegistry
+            {
+                {
+                    _compFactory.GetComponentName<StationJobsComponent>(),
+                    StationJobsSystem.MakeAvailableJobsOverride(_compFactory, new Dictionary<ProtoId<JobPrototype>, int[]>
+                    {
+                        ["EgideCentcommOperator"] = [1, 1],
+                        ["EgideCentcommChiefOfStaff"] = [1, 1],
+                    })
+                },
+            },
+        }, new EntityUid[] { grid.Value.Owner }, Loc.GetString("egide-centcomm-station-name"));
+        // Egide-End
+
         _shuttle.TryAddFTLDestination(mapId, true, out _);
         Log.Info($"Created centcomm grid {ToPrettyString(grid)} on map {ToPrettyString(map)} for station {ToPrettyString(station)}");
     }

@@ -143,8 +143,14 @@ namespace Content.Client.LateJoin
 
         private readonly Control _base;
 
-        public LateJoinGui()
+        // Egide: null preserves the unfiltered menu for other callers.
+        private readonly bool? _centralCommandOnly;
+        private static readonly ProtoId<JobPrototype> CentcommOperator = "EgideCentcommOperator";
+        private static readonly ProtoId<JobPrototype> CentcommChief = "EgideCentcommChiefOfStaff";
+
+        public LateJoinGui(bool? centralCommandOnly = null)
         {
+            _centralCommandOnly = centralCommandOnly;
             MinSize = SetSize = new Vector2(360, 560);
             IoCManager.InjectDependencies(this);
             _sprites = _entitySystem.GetEntitySystem<SpriteSystem>();
@@ -152,7 +158,12 @@ namespace Content.Client.LateJoin
             _gameTicker = _entitySystem.GetEntitySystem<ClientGameTicker>();
             _sawmill = _logManager.GetSawmill("latejoin.panel");
 
-            Title = Loc.GetString("late-join-gui-title");
+            Title = Loc.GetString(_centralCommandOnly switch
+            {
+                true => "egide-centcomm-join-title",
+                false => "egide-station-join-title",
+                null => "late-join-gui-title",
+            });
 
             _base = new BoxContainer()
             {
@@ -188,6 +199,15 @@ namespace Content.Client.LateJoin
 
             foreach (var (id, name) in _gameTicker.StationNames)
             {
+                // Egide: classify by jobs, regardless of the localized station name.
+                if (!_gameTicker.JobsAvailable.TryGetValue(id, out var availableJobs))
+                    continue;
+
+                var isCentralCommand = availableJobs.ContainsKey(CentcommOperator) ||
+                                       availableJobs.ContainsKey(CentcommChief);
+                if (_centralCommandOnly != null && isCentralCommand != _centralCommandOnly.Value)
+                    continue;
+
                 var jobList = new BoxContainer
                 {
                     Orientation = LayoutOrientation.Vertical,
@@ -393,6 +413,8 @@ namespace Content.Client.LateJoin
                     }
                 }
             }
+            if (_jobLists.Count == 0)
+                _base.AddChild(new Label { Text = Loc.GetString("egide-join-no-stations") });
         }
 
         private void JobsAvailableUpdated(IReadOnlyDictionary<NetEntity, Dictionary<ProtoId<JobPrototype>, int?>> updatedJobs)

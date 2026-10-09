@@ -27,7 +27,7 @@ public sealed partial class CCVars
     ///     Guide Entry Prototype ID to be displayed as the server rules.
     /// </summary>
     public static readonly CVarDef<string> RulesFile =
-        CVarDef.Create("server.rules_file", "OrionRuleset", CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("server.rules_file", "EgideRuleset", CVar.REPLICATED | CVar.SERVER); // Egide-Edit
 
     /// <summary>
     ///     Guide entry that is displayed by default when a guide is opened.

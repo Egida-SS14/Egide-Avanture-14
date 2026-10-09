@@ -104,8 +104,10 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                                         </controls:StripeBack>
                                         <controls:HLine Color="{x:Static style:StyleNano.DisabledFore}" Thickness="1" />
                                         <Button Name="ReadyButton" Access="Public" ToggleMode="True" Text="{Loc 'ui-lobby-ready-up-button'}" StyleClasses="ButtonBig" HorizontalExpand="True" />
+                                        <Button Name="JoinCentcommButton" Access="Public" Text="{Loc 'egide-centcomm-join-button'}" ToolTip="{Loc 'egide-centcomm-join-tooltip'}" Disabled="True" HorizontalExpand="True" />
                                         <cc:UICommandButton Command="observe" Name="ObserveButton" Access="Public" Text="{Loc 'ui-lobby-observe-button'}" WindowType="{x:Type lobbyUi:ObserveWarningWindow}" HorizontalExpand="True" />
                                         <Button Name="ManifestButton" Access="Public" Text="{Loc 'ui-lobby-manifest-button'}" HorizontalExpand="True" />
+                                        <Button Name="SponsorButton" Text="{Loc 'egide-sponsor-button'}" HorizontalExpand="True" />
                                         <Button Name="OptionsButton" Access="Public" Text="{Loc 'ui-lobby-options-button'}" HorizontalExpand="True" />
                                         <Button Name="LeaveButton" Access="Public" Text="{Loc 'ui-lobby-leave-button'}" HorizontalExpand="True" />
                                     </BoxContainer>

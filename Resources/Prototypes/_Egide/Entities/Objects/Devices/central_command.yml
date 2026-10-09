@@ -1,0 +1,29 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: CentcomIDCard
+  id: EgideCentcommOperatorIDCard
+  components:
+  - type: PresetIdCard
+    job: EgideCentcommOperator
+
+- type: entity
+  parent: CentcomPDA
+  id: EgideCentcommOperatorPDA
+  components:
+  - type: Pda
+    id: EgideCentcommOperatorIDCard
+
+- type: entity
+  parent: CentcomIDCard
+  id: EgideCentcommChiefOfStaffIDCard
+  components:
+  - type: PresetIdCard
+    job: EgideCentcommChiefOfStaff
+
+- type: entity
+  parent: CentcomPDA
+  id: EgideCentcommChiefOfStaffPDA
+  components:
+  - type: Pda
+    id: EgideCentcommChiefOfStaffIDCard
